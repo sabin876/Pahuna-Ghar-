@@ -2,19 +2,20 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Utensils, 
-  MessageCircle, 
+  MessageCircle,
   Coffee, 
   Flame, 
   ChefHat, 
-  Sparkles, 
   Mountain, 
   Star, 
   Soup, 
   GlassWater, 
-  Wheat, 
-  Beef,
+  Wheat,
   UtensilsCrossed,
-  ArrowRight
+  ArrowRight,
+  Egg,
+  Salad,
+  Drumstick
 } from 'lucide-react';
 import thaliImg from '../assets/menu_thali.png';
 import chowmeinImg from '../assets/Chowmein.webp';
@@ -195,8 +196,21 @@ const menuData = [
   },
 ];
 
-// Note: categoryIcons were defined but not used in the current UI design.
-// Removed to keep the file clean as categories have changed.
+const categoryIcons = {
+  'NEPALI THALI SET': <Utensils size={18} />,
+  'DHIDO SET': <Mountain size={18} />,
+  'MO:MO': <ChefHat size={18} />,
+  'CHOWMEIN / THUKPA': <Wheat size={18} />,
+  'NEWARI KHAJA / TASS': <UtensilsCrossed size={18} />,
+  'EGGS': <Egg size={18} />,
+  'SADEKO ITEMS': <Salad size={18} />,
+  'VEGETABLES': <Flame size={18} />,
+  'NON-VEG': <Drumstick size={18} />,
+  'BREAKFAST': <Coffee size={18} />,
+  'FRY ITEMS': <Star size={18} />,
+  'SOUP': <Soup size={18} />,
+  'DRINKS': <GlassWater size={18} />,
+};
 
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState(menuData[0].category);
@@ -206,7 +220,7 @@ const MenuPage = () => {
   const currentImage = activeData.img || thaliImg;
 
   return (
-    <div className="menu-page" style={{ backgroundColor: '#050505', minHeight: '100vh', color: '#FFFFFF', paddingTop: '120px' }}>
+    <div className="menu-page" style={{ backgroundColor: '#ffffff', minHeight: '100vh', color: '#1a1a1a', paddingTop: '120px' }}>
 
       {/* Decorative Header */}
       <div className="menu-header-container">
@@ -237,7 +251,8 @@ const MenuPage = () => {
                 className={`category-btn ${activeCategory === cat.category ? 'active' : ''}`}
                 onClick={() => setActiveCategory(cat.category)}
               >
-                {cat.category.toUpperCase()}
+                <span className="cat-icon">{categoryIcons[cat.category] || <Utensils size={18} />}</span>
+                <span className="cat-label">{cat.category}</span>
               </button>
             ))}
           </div>
@@ -254,13 +269,25 @@ const MenuPage = () => {
             <div className="menu-items-list">
               {activeData.items.map((item, index) => (
                 <div key={`${item.name}-${index}`} className="menu-item-row">
-                  <div className="item-name">{item.name.toUpperCase()}</div>
-                  {item.price && (
-                    <>
-                      <div className="leader-line"></div>
-                      <div className="item-price">{item.price}</div>
-                    </>
-                  )}
+                  <div className="item-top-row">
+                    <div className="item-name">{item.name.toUpperCase()}</div>
+                    {item.price && (
+                      <>
+                        <div className="leader-line"></div>
+                        <div className="item-price">{item.price}</div>
+                      </>
+                    )}
+                  </div>
+                  <a
+                    href={`https://wa.me/97145526929?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name}${item.price ? ` (${item.price})` : ''} from the ${activeCategory} menu.`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="item-order-btn"
+                    title={`Order ${item.name} via WhatsApp`}
+                  >
+                    <MessageCircle size={13} />
+                    Order
+                  </a>
                 </div>
               ))}
             </div>
@@ -318,14 +345,14 @@ const MenuPage = () => {
         .line {
           height: 1px;
           width: clamp(100px, 15vw, 250px);
-          background: #d1a257;
-          opacity: 0.6;
+          background: #2d6a2d;
+          opacity: 0.5;
         }
 
         .dot {
           width: 4px;
           height: 4px;
-          background: #d1a257;
+          background: #2d6a2d;
           border-radius: 50%;
         }
 
@@ -337,49 +364,81 @@ const MenuPage = () => {
         .menu-title {
           font-family: var(--font-serif);
           font-size: clamp(40px, 6vw, 64px);
-          color: #d1a257;
+          color: #1e4d1e;
           font-weight: 400;
           margin: 0;
           text-transform: capitalize;
         }
 
         .menu-categories-wrapper {
-          display: flex;
+          background: #f5f0e8;
+          border-radius: 999px;
+          display: inline-flex;
           justify-content: center;
-          margin-bottom: 30px;
+          margin: 0 auto 36px auto;
+          max-width: 100%;
           overflow-x: auto;
-          padding: 10px 0;
+          padding: 8px 10px;
+          display: flex;
+          box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+          scrollbar-width: none;
+        }
+
+        .menu-categories-wrapper::-webkit-scrollbar {
+          display: none;
         }
 
         .menu-categories {
           display: flex;
-          gap: 15px;
+          gap: 8px;
           flex-wrap: wrap;
           justify-content: center;
         }
 
         .category-btn {
-          background: transparent;
-          border: 1px solid #d1a257;
-          color: #d1a257;
-          padding: 12px 25px;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          background: #ffffff;
+          border: 1.5px solid #d0d0d0;
+          color: #1a3a1a;
+          padding: 10px 20px;
           font-family: var(--font-sans);
           font-size: 13px;
-          font-weight: 700;
-          letter-spacing: 1px;
+          font-weight: 600;
+          letter-spacing: 0.3px;
           cursor: pointer;
-          transition: all 0.3s ease;
-          border-radius: 4px;
+          transition: all 0.25s ease;
+          border-radius: 999px;
           white-space: nowrap;
         }
 
+        .cat-icon {
+          display: flex;
+          align-items: center;
+          color: #2d6a2d;
+          flex-shrink: 0;
+        }
+
+        .cat-label {
+          text-transform: capitalize;
+          font-size: 13px;
+        }
+
         .category-btn.active {
-          background: #d1a257;
-          color: #000;
+          background: #1e4d1e;
+          border-color: #1e4d1e;
+          color: #ffffff;
+        }
+
+        .category-btn.active .cat-icon {
+          color: #ffffff;
         }
 
         .category-btn:hover:not(.active) {
-          background: rgba(209, 162, 87, 0.1);
+          background: #f0f7f0;
+          border-color: #2d6a2d;
+          color: #1a3a1a;
         }
 
         .menu-content-grid {
@@ -393,7 +452,7 @@ const MenuPage = () => {
         .section-subtitle {
           font-family: var(--font-serif);
           font-size: 32px;
-          color: #d1a257;
+          color: #1e4d1e;
           margin-bottom: 40px;
           font-weight: 400;
           text-align: center;
@@ -411,15 +470,49 @@ const MenuPage = () => {
 
         .menu-item-row {
           display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 14px 0;
+          border-bottom: 1px solid rgba(0,0,0,0.07);
+        }
+
+        .item-top-row {
+          display: flex;
           align-items: baseline;
-          gap: 15px;
+          gap: 12px;
+          width: 100%;
+        }
+
+        .item-order-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          background: transparent;
+          border: 1.5px solid #2d6a2d;
+          color: #2d6a2d;
+          padding: 4px 12px;
+          border-radius: 999px;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          text-decoration: none;
+          white-space: nowrap;
+          flex-shrink: 0;
+          transition: all 0.2s ease;
+          text-transform: uppercase;
+        }
+
+        .item-order-btn:hover {
+          background: #1e4d1e;
+          color: #fff;
+          border-color: #1e4d1e;
         }
 
         .item-name {
           font-family: var(--font-sans);
           font-weight: 700;
-          font-size: 18px;
-          color: #fff;
+          font-size: 16px;
+          color: #1a1a1a;
           white-space: nowrap;
           flex-shrink: 0;
         }
@@ -427,7 +520,7 @@ const MenuPage = () => {
         .leader-line {
           flex-grow: 1;
           height: 1px;
-          border-bottom: 2px dotted rgba(209, 162, 87, 0.4);
+          border-bottom: 2px dotted rgba(45, 106, 45, 0.25);
           transform: translateY(-4px);
         }
 
@@ -435,7 +528,7 @@ const MenuPage = () => {
           font-family: var(--font-sans);
           font-weight: 700;
           font-size: 18px;
-          color: #fff;
+          color: #1e4d1e;
           white-space: nowrap;
           flex-shrink: 0;
         }
@@ -470,8 +563,8 @@ const MenuPage = () => {
           display: inline-flex;
           align-items: center;
           gap: 12px;
-          background: #d1a257;
-          color: #000;
+          background: #1e4d1e;
+          color: #fff;
           padding: 16px 40px;
           border-radius: 50px;
           font-weight: 700;
@@ -483,13 +576,13 @@ const MenuPage = () => {
 
         .whatsapp-order-btn:hover {
           transform: translateY(-3px);
-          box-shadow: 0 10px 20px rgba(209, 162, 87, 0.3);
+          box-shadow: 0 10px 20px rgba(30, 77, 30, 0.25);
         }
 
         @media (max-width: 1024px) {
           .menu-content-grid {
             grid-template-columns: 1fr;
-            gap: 60px;
+            gap: 40px;
           }
 
           .menu-image-container {
@@ -506,20 +599,101 @@ const MenuPage = () => {
         }
 
         @media (max-width: 768px) {
-          .header-line .line {
-            width: 40px;
-          }
-          
-          .menu-title {
-            font-size: 32px;
+          .header-line .line { width: 30px; }
+
+          .menu-title { font-size: 28px; }
+
+          .menu-header-container { margin-bottom: 30px; }
+
+          .menu-categories-wrapper {
+            border-radius: 16px;
+            padding: 10px;
+            margin-bottom: 24px;
           }
 
-          .item-name, .item-price {
-            font-size: 15px;
+          .menu-categories {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            flex-wrap: unset;
+            gap: 8px;
+            overflow-x: unset;
+            justify-content: unset;
           }
-          
+
+          .category-btn {
+            padding: 10px 12px;
+            font-size: 12px;
+            flex-shrink: unset;
+            justify-content: center;
+            width: 100%;
+          }
+
+          .cat-label { font-size: 12px; }
+
+          .menu-image-container { display: none; }
+
           .section-subtitle {
-            font-size: 24px;
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+
+          .menu-items-list { gap: 10px; }
+
+          .menu-item-row {
+            flex-direction: column;
+            gap: 0;
+            padding: 0;
+            border-bottom: none;
+            background: #f8faf8;
+            border: 1px solid rgba(45, 106, 45, 0.15);
+            border-radius: 12px;
+            padding: 14px 16px;
+          }
+
+          .item-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 10px;
+          }
+
+          .item-name {
+            font-size: 13px;
+            white-space: normal;
+            word-break: break-word;
+            flex: 1;
+          }
+
+          .item-price {
+            font-size: 13px;
+            font-weight: 700;
+            color: #d1a257;
+            white-space: nowrap;
+            flex-shrink: 0;
+          }
+
+          .leader-line { display: none; }
+
+          .item-order-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            width: 100%;
+            padding: 9px 0;
+            font-size: 12px;
+            border-radius: 8px;
+            border: 1.5px solid #2d6a2d;
+          }
+
+          .menu-cta { margin-top: 30px; }
+
+          .whatsapp-order-btn {
+            padding: 14px 28px;
+            font-size: 13px;
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>
