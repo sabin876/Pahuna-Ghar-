@@ -24,6 +24,10 @@ import fryItemsImg from '../assets/Fry items.webp';
 import nepaliThaliImg from '../assets/Nepali Thali set.webp';
 import newariKhajaImg from '../assets/Newari Khaja Tass.webp';
 import momoImg from '../assets/momo.webp';
+import drinksImg from '../assets/menu_drinks.png';
+import soupImg from '../assets/menu_soup.png';
+import eggsImg from '../assets/menu_eggs.png';
+import vegetablesImg from '../assets/menu_vegetables.png';
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
@@ -97,6 +101,7 @@ const menuData = [
   },
   {
     category: 'EGGS',
+    img: eggsImg,
     items: [
       { name: 'Boiled Egg', price: '1 Dhs' },
       { name: 'Egg Bhujuri (Half / Full)', price: '3/5 Dhs' },
@@ -117,6 +122,7 @@ const menuData = [
   },
   {
     category: 'VEGETABLES',
+    img: vegetablesImg,
     items: [
       { name: 'Karela Alu (Half/Full)', price: '3/5 Dhs' },
       { name: 'Cauliflower Alu (Half/Full)', price: '3/5 Dhs' },
@@ -177,6 +183,7 @@ const menuData = [
   },
   {
     category: 'SOUP',
+    img: soupImg,
     items: [
       { name: 'Chicken Soup', price: '' },
       { name: 'Veg Soup', price: '' },
@@ -184,6 +191,7 @@ const menuData = [
   },
   {
     category: 'DRINKS',
+    img: drinksImg,
     items: [
       { name: 'Water', price: '1 Dhs' },
       { name: 'Coke / Sprite', price: '3 Dhs' },
@@ -275,32 +283,36 @@ const MenuPage = () => {
                       <>
                         <div className="leader-line"></div>
                         <div className="item-price">{item.price}</div>
+                        <motion.a
+                          href={`https://wa.me/971555429243?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name}${item.price ? ` (${item.price})` : ''} from the ${activeCategory} menu.`)}`}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="item-order-btn"
+                          title={`Order ${item.name} via WhatsApp`}
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <MessageCircle size={11} />
+                          Order
+                        </motion.a>
                       </>
                     )}
                   </div>
-                  <a
-                    href={`https://wa.me/97145526929?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name}${item.price ? ` (${item.price})` : ''} from the ${activeCategory} menu.`)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="item-order-btn"
-                    title={`Order ${item.name} via WhatsApp`}
-                  >
-                    <MessageCircle size={13} />
-                    Order
-                  </a>
                 </div>
               ))}
             </div>
 
             <div className="menu-cta">
-              <a
-                href={`https://wa.me/97145526929?text=${encodeURIComponent(`Hello! I'd like to order from the ${activeCategory} menu.`)}`}
+              <motion.a
+                href={`https://wa.me/971555429243?text=${encodeURIComponent(`Hello! I'd like to order from the ${activeCategory} menu.`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="whatsapp-order-btn"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
                 ORDER VIA WHATSAPP <ArrowRight size={18} />
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -486,26 +498,47 @@ const MenuPage = () => {
         .item-order-btn {
           display: inline-flex;
           align-items: center;
-          gap: 5px;
-          background: transparent;
-          border: 1.5px solid #2d6a2d;
-          color: #2d6a2d;
-          padding: 4px 12px;
+          gap: 6px;
+          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+          border: none;
+          color: #fff;
+          padding: 6px 14px;
           border-radius: 999px;
           font-size: 11px;
           font-weight: 700;
-          letter-spacing: 0.5px;
+          letter-spacing: 0.6px;
           text-decoration: none;
           white-space: nowrap;
           flex-shrink: 0;
-          transition: all 0.2s ease;
+          transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
           text-transform: uppercase;
+          box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
+          position: relative;
+          overflow: hidden;
+        }
+
+        .item-order-btn::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
+          border-radius: 999px;
+          pointer-events: none;
         }
 
         .item-order-btn:hover {
-          background: #1e4d1e;
-          color: #fff;
-          border-color: #1e4d1e;
+          transform: translateY(-2px) scale(1.04);
+          box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
+          background: linear-gradient(135deg, #2de070 0%, #0fa37a 100%);
+        }
+
+        .item-order-btn:hover svg {
+          animation: iconPulse 0.6s ease infinite alternate;
+        }
+
+        @keyframes iconPulse {
+          from { transform: scale(1); }
+          to   { transform: scale(1.25); }
         }
 
         .item-name {
@@ -681,10 +714,18 @@ const MenuPage = () => {
             align-items: center;
             gap: 6px;
             width: 100%;
-            padding: 9px 0;
+            padding: 10px 0;
             font-size: 12px;
-            border-radius: 8px;
-            border: 1.5px solid #2d6a2d;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.35);
+            color: #fff;
+          }
+
+          .item-order-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
           }
 
           .menu-cta { margin-top: 30px; }

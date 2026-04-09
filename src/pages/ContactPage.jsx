@@ -39,8 +39,8 @@ const itemVariants = {
 };
 
 const address = 'Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.';
-const phone = '+971 4 552 6929';
-const whatsapp = '+971 4 552 6929';
+const phone = '+971 55 542 9243';
+const whatsapp = '+971 55 542 9243';
 const mapLink = 'https://maps.app.goo.gl/qPpjqiqJmaPXwgS47';
 
 const particlesData = Array.from({ length: 20 }).map(() => ({
@@ -216,7 +216,7 @@ function ContactPage() {
                 <h3>Follow Our Journey</h3>
                 <div className="social-links-premium">
                   <motion.a 
-                    href="https://facebook.com/starmomouae" 
+                    href="https://www.facebook.com/profile.php?id=100077641522086" 
                     target="_blank"
                     className="social-btn-premium"
                     whileHover={{ scale: 1.15, rotate: 12, background: 'var(--secondary)', color: 'var(--primary)' }}

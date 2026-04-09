@@ -21,8 +21,8 @@ The site is configured for deployment on Vercel.
 
 ## 📞 Contact Information
 - **Address**: Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.
-- **Phone**: +971 4 331 2767
-- **WhatsApp**: +971 55 105 3445
+- **Phone**: +971 55 542 9243
+- **WhatsApp**: +971 55 542 9243
 
 ---
 © 2026 Pahuna Ghar Restaurant LLC. All rights reserved.

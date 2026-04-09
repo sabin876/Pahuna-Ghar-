@@ -79,7 +79,8 @@ const assetModules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp,svg}', {
 });
 
 const logoImg = assetModules['/src/assets/logo3.png'] || assetModules['/src/assets/Logo.jpeg'] || assetModules['/src/assets/logo.jpeg'] || assetModules['/src/assets/logo.png'];
-const heroImg = assetModules['/src/assets/Hero section.webp'];
+const heroImg = assetModules['/src/assets/Hero section image.png'];
+const heroBgImg = assetModules['/src/assets/Hero section.webp'];
 const contentBgImg = assetModules['/src/assets/contnet Bg.jpeg'];
 const thakaliImg = assetModules['/src/assets/Nepali Thali set.webp'];
 const dhidoImg = assetModules['/src/assets/Dhido set.webp'];
@@ -166,7 +167,7 @@ function App() {
           </motion.ul>
 
           <motion.div className="nav-actions desktop-only" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.55, duration: 0.45 }}>
-            <motion.a href="tel:+97145526929" className="btn btn-primary" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.98 }}>
+            <motion.a href="tel:+971555429243" className="btn btn-primary" whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.98 }}>
               <Phone size={18} />
               <span>Call Now</span>
             </motion.a>
@@ -204,7 +205,7 @@ function App() {
                 })}
               </ul>
               <div className="mobile-menu-footer">
-                <a href="tel:+97145526929" className="btn btn-primary w-full">
+                <a href="tel:+971555429243" className="btn btn-primary w-full">
                   <Phone size={18} />
                   <span>Call Now</span>
                 </a>
@@ -242,10 +243,20 @@ function App() {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               />
             </div>
-            <div
+
+            <motion.div
               className="hero-bg"
               style={{
-                backgroundImage: `linear-gradient(120deg, rgba(0,20,0,0.82) 0%, rgba(0,0,0,0.55) 50%, rgba(0,15,0,0.72) 100%), url("${heroImg}")`,
+                backgroundImage: `linear-gradient(120deg, rgba(0,25,0,0.88) 0%, rgba(0,0,0,0.7) 50%, rgba(0,20,0,0.85) 100%), url("${heroBgImg}")`,
+              }}
+              animate={{ 
+                scale: [1, 1.08, 1],
+                rotate: [0, 0.5, 0]
+              }}
+              transition={{ 
+                duration: 20, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
               }}
             />
             <motion.div
@@ -256,77 +267,74 @@ function App() {
             />
             <div className="container">
               <div className="hero-content-wrapper">
-                <motion.div
-                  className="hero-text-content"
-                  initial={{ opacity: 0, x: -60 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.85, delay: 0.35, ease: easeOutExpo }}
-                >
-                  <motion.span
-                    initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
-                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                    transition={{ duration: 0.65, delay: 0.55 }}
-                    className="hero-badge hero-badge--shine"
-                  >
-                    Experience the Authentic Taste of Nepal
-                  </motion.span>
-                  <h1 className="hero-title">
-                    <motion.span
-                      style={{ color: 'var(--secondary)', display: 'block', marginBottom: '10px' }}
-                      initial={{ opacity: 0, y: 48, rotateX: -25 }}
-                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                      transition={{ duration: 0.75, delay: 0.65, ease: easeOutExpo }}
-                    >
-                      PAHUNA GHAR
-                    </motion.span>
-                    <motion.span
-                      className="hero-title-line"
-                      initial={{ opacity: 0, letterSpacing: '0.35em' }}
-                      animate={{ opacity: 1, letterSpacing: '0.06em' }}
-                      transition={{ duration: 0.9, delay: 0.85, ease: easeOutExpo }}
-                      style={{ display: 'block' }}
-                    >
-                      RESTAURANT LLC
-                    </motion.span>
-                  </h1>
-                  <motion.p
-                    className="hero-description"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.05, duration: 0.6 }}
-                  >
-                    Bringing the legendary Himalayan flavors to the heart of Dubai. Hand-crafted dumplings, traditional spices, and warm hospitality.
-                  </motion.p>
                   <motion.div
-                    className="hero-cta-wrapper"
-                    style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'flex-start' }}
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.15, duration: 0.5 }}
+                    className="hero-text-content"
+                    initial={{ opacity: 0, x: -60 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.85, delay: 0.35, ease: easeOutExpo }}
                   >
-                    <motion.a href="#menu" className="btn btn-primary" whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.97 }}>
-                      Discover Menu
-                    </motion.a>
-                    <motion.a href="tel:+97145526929" className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.12)' }} whileTap={{ scale: 0.97 }}>
-                      <Phone size={18} />
-                      <span>Call Now</span>
-                    </motion.a>
+                    <motion.span
+                      initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
+                      animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                      transition={{ duration: 0.65, delay: 0.55 }}
+                      className="hero-badge hero-badge--shine"
+                    >
+                      Experience the Authentic Taste of Nepal
+                    </motion.span>
+                    <h1 className="hero-title">
+                      <motion.span
+                        style={{ color: 'var(--secondary)', display: 'block', marginBottom: '10px' }}
+                        initial={{ opacity: 0, y: 48, rotateX: -25 }}
+                        animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                        transition={{ duration: 0.75, delay: 0.65, ease: easeOutExpo }}
+                      >
+                        PAHUNA GHAR
+                      </motion.span>
+                      <motion.span
+                        className="hero-title-line"
+                        initial={{ opacity: 0, letterSpacing: '0.35em' }}
+                        animate={{ opacity: 1, letterSpacing: '0.06em' }}
+                        transition={{ duration: 0.9, delay: 0.85, ease: easeOutExpo }}
+                        style={{ display: 'block' }}
+                      >
+                        RESTAURANT LLC
+                      </motion.span>
+                    </h1>
+                    <motion.p
+                      className="hero-description"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.05, duration: 0.6 }}
+                    >
+                      Bringing the legendary Himalayan flavors to the heart of Dubai. Hand-crafted dumplings, traditional spices, and warm hospitality.
+                    </motion.p>
+                    <motion.div
+                      className="hero-cta-wrapper"
+                      style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'flex-start' }}
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.15, duration: 0.5 }}
+                    >
+                      <motion.a href="#menu" className="btn btn-primary" whileHover={{ scale: 1.05, y: -3 }} whileTap={{ scale: 0.97 }}>
+                        Discover Menu
+                      </motion.a>
+                      <motion.a href="tel:+971555429243" className="btn btn-outline" style={{ color: 'white', borderColor: 'white' }} whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.12)' }} whileTap={{ scale: 0.97 }}>
+                        <Phone size={18} />
+                        <span>Call Now</span>
+                      </motion.a>
+                    </motion.div>
                   </motion.div>
-                </motion.div>
 
-                <motion.div 
-                  className="hero-images-wrapper desktop-only"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.85, delay: 0.65, ease: easeOutExpo }}
-                >
-                  <motion.div className="hero-image-card float-anim-1">
-                    <img src={thakaliImg} alt="Thakali Set" />
+                  <motion.div 
+                    className="hero-main-image-wrapper"
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2, ease: easeOutExpo }}
+                  >
+                    <img src={heroImg} alt="Pahuna Ghar Specialty" className="hero-main-image" />
                   </motion.div>
-                  <motion.div className="hero-image-card float-anim-2">
-                    <img src={dhidoImg} alt="Dhido Set" />
-                  </motion.div>
-                </motion.div>
+
+
               </div>
             </div>
           </header>
@@ -414,9 +422,9 @@ function App() {
               </div>
               <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8' }}>Authentic taste of Nepal in Dubai. Experience the true essence of Himalayan flavors with every bite.</p>
               <div className="social-links">
-                <motion.a href="https://facebook.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
+                <motion.a href="https://www.facebook.com/profile.php?id=100077641522086" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
                 <motion.a href="https://instagram.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Instagram size={20} /></motion.a>
-                <motion.a href="https://wa.me/97145526929" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><MessageCircle size={20} /></motion.a>
+                <motion.a href="https://wa.me/971555429243" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><MessageCircle size={20} /></motion.a>
               </div>
             </motion.div>
             <motion.div className="footer-col" variants={footerItem}>
@@ -438,11 +446,11 @@ function App() {
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <Phone className="text-secondary" size={20} color="var(--secondary)" />
-                  <span>+971 4 552 6929</span>
+                  <span>+971 55 542 9243</span>
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <MessageCircle className="text-secondary" size={20} color="var(--secondary)" />
-                  <span>+971 4 552 6929 (WhatsApp)</span>
+                  <span>+971 55 542 9243 (WhatsApp)</span>
                 </li>
               </ul>
             </motion.div>
@@ -457,11 +465,7 @@ function App() {
                   <span>Sat - Sun:</span>
                   <span>10:00 AM - 12:00 AM</span>
                 </li>
-                <li style={{ marginTop: '20px' }}>
-                  <motion.div style={{ background: 'white', padding: '10px', borderRadius: '8px', display: 'inline-block' }} whileHover={{ scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=StarMomoHouse" alt="QR Code" />
-                  </motion.div>
-                </li>
+
               </ul>
             </motion.div>
           </motion.div>
@@ -474,7 +478,7 @@ function App() {
       {/* Floating Contact Buttons */}
       <div className="floating-contact">
         <motion.a
-          href="tel:+97145526929"
+          href="tel:+971555429243"
           className="floating-btn call"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -485,7 +489,7 @@ function App() {
           <Phone size={24} />
         </motion.a>
         <motion.a
-          href="https://wa.me/97145526929"
+          href="https://wa.me/971555429243"
           target="_blank"
           className="floating-btn whatsapp"
           initial={{ scale: 0, opacity: 0 }}

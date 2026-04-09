@@ -49,7 +49,7 @@ const ReviewCard = ({ review }) => (
     <div className="review-content">
       <div className="review-stars">
         {[...Array(review.rating)].map((_, i) => (
-          <Star key={i} size={14} fill="var(--secondary)" color="var(--secondary)" />
+          <Star key={i} size={14} fill="var(--primary)" color="var(--primary)" />
         ))}
       </div>
       <p className="review-text">"{review.text}"</p>
@@ -92,7 +92,7 @@ const GoogleReviews = () => {
             <div className="rating-stats">
               <span className="rating-value">4.9</span>
               <div className="stars-row">
-                {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="var(--secondary)" color="var(--secondary)" />)}
+                {[...Array(5)].map((_, i) => <Star key={i} size={16} fill="var(--primary)" color="var(--primary)" />)}
               </div>
               <span className="review-count">(500+ Reviews)</span>
             </div>
