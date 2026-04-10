@@ -20,7 +20,7 @@ The site is configured for deployment on Vercel.
 - **Deployment**: Vercel
 
 ## 📞 Contact Information
-- **Address**: Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.
+- **Address**: X4HP+CXR Jabal Ali mall - Jabal Ali Industrial First - Dubai - United Arab Emirates
 - **Phone**: +971 55 542 9243
 - **WhatsApp**: +971 55 542 9243
 

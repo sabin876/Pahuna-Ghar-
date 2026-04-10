@@ -15,7 +15,7 @@ const reviews = [
     id: 2,
     name: "Sarah Jenkins",
     rating: 5,
-    text: "The best momos in Bur Dubai! Excellent service and very friendly staff. The atmosphere is very cozy and welcoming.",
+    text: "The best momos in Dubai! Excellent service and very friendly staff. The atmosphere is very cozy and welcoming.",
     date: "1 month ago",
     avatar: "https://i.pravatar.cc/150?u=sarah"
   },

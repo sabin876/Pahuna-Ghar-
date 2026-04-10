@@ -442,7 +442,7 @@ function App() {
               <ul style={{ color: 'rgba(255,255,255,0.7)', display: 'grid', gap: '20px' }}>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <MapPin className="text-secondary" size={20} color="var(--secondary)" />
-                  <span>Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.</span>
+                  <span>X4HP+CXR Jabal Ali mall - Jabal Ali Industrial First - Dubai - United Arab Emirates</span>
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <Phone className="text-secondary" size={20} color="var(--secondary)" />

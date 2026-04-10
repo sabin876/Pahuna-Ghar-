@@ -38,7 +38,7 @@ const itemVariants = {
   }
 };
 
-const address = 'Shop No. 63, Shindhaga City Center, Al Ghubaiba, Bur Dubai, Dubai - U.A.E.';
+const address = 'X4HP+CXR Jabal Ali mall - Jabal Ali Industrial First - Dubai - United Arab Emirates';
 const phone = '+971 55 542 9243';
 const whatsapp = '+971 55 542 9243';
 const mapLink = 'https://maps.app.goo.gl/qPpjqiqJmaPXwgS47';
@@ -143,7 +143,7 @@ function ContactPage() {
             Experience Our Hospitality
           </motion.h1>
           <motion.p className="contact-subtitle" variants={itemVariants}>
-            Located in the heart of Bur Dubai, we're ready to serve you the most authentic Himalayan flavors.
+            Located in Jabal Ali mall, we're ready to serve you the most authentic Himalayan flavors.
           </motion.p>
         </div>
       </header>
