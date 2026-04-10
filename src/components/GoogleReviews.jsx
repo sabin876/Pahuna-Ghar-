@@ -70,7 +70,7 @@ const ReviewCard = ({ review }) => (
 );
 
 const GoogleReviews = () => {
-  const mapLink = 'https://maps.app.goo.gl/pGnZDFpJLvWLcFVu5';
+  const mapLink = 'https://maps.app.goo.gl/EzTtC62XqXfwYqW86';
 
   return (
     <section id="reviews" className="reviews-section section-padding">

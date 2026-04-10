@@ -458,12 +458,8 @@ function App() {
               <h4>Opening Hours</h4>
               <ul style={{ color: 'rgba(255,255,255,0.7)', display: 'grid', gap: '15px' }}>
                 <li style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>Mon - Fri:</span>
-                  <span>11:00 AM - 11:00 PM</span>
-                </li>
-                <li style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <span>Sat - Sun:</span>
-                  <span>10:00 AM - 12:00 AM</span>
+                  <span>Everyday:</span>
+                  <span>07:00 AM - 11:30 PM</span>
                 </li>
 
               </ul>

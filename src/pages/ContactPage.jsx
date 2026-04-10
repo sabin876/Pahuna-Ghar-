@@ -41,7 +41,7 @@ const itemVariants = {
 const address = 'X4HP+CXR Jabal Ali mall - Jabal Ali Industrial First - Dubai - United Arab Emirates';
 const phone = '+971 55 542 9243';
 const whatsapp = '+971 55 542 9243';
-const mapLink = 'https://maps.app.goo.gl/qPpjqiqJmaPXwgS47';
+const mapLink = 'https://maps.app.goo.gl/EzTtC62XqXfwYqW86';
 
 const particlesData = Array.from({ length: 20 }).map(() => ({
   initialX: Math.random() * 100 + '%',
@@ -250,7 +250,7 @@ function ContactPage() {
             <motion.div className="map-side" variants={itemVariants}>
               <iframe
                 title="Pahuna Ghar Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2980.8975945512047!2d55.1374375!3d24.978562500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f0d002f2a3677%3A0x6b175905ec7c35c9!2sPahuna%20Ghar%20Restaurant%20LLC!5e1!3m2!1sen!2snp!4v1775350712592!5m2!1sen!2snp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.1524388484133!2d55.1352488!3d24.9785625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f0d002f2a3677%3A0x6b175905ec7c35c9!2sPahuna%20Ghar%20Restaurant%20LLC!5e0!3m2!1sen!2sae!4v1712751500000!5m2!1sen!2sae"
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
