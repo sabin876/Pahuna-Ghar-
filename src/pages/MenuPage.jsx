@@ -232,509 +232,353 @@ const MenuPage = () => {
 
       {/* Decorative Header */}
       <div className="menu-header-container">
-        <div className="menu-header-decorative">
-          <div className="header-line">
-            <span className="dot"></span>
-            <span className="dot"></span>
-            <div className="line"></div>
-            <span className="dot big"></span>
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="menu-header-content text-center"
+        >
+          <span className="menu-subtitle-elegant">AUTHENTIC NEPALESE CUISINE</span>
+          <h1 className="menu-title-premium">Explore Our Menu</h1>
+          <div className="menu-header-divider">
+            <span className="line"></span>
+            <Utensils size={18} className="icon" />
+            <span className="line"></span>
           </div>
-          <h1 className="menu-title">Our Menu</h1>
-          <div className="header-line rotate">
-            <span className="dot big"></span>
-            <div className="line"></div>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className="container">
         {/* Category Navigation */}
-        <div className="menu-categories-wrapper">
-          <div className="menu-categories">
+        <div className="menu-nav-container">
+          <div className="menu-categories-pills">
             {menuData.map((cat) => (
               <button
                 key={cat.category}
-                className={`category-btn ${activeCategory === cat.category ? 'active' : ''}`}
+                className={`menu-pill ${activeCategory === cat.category ? 'active' : ''}`}
                 onClick={() => setActiveCategory(cat.category)}
               >
-                <span className="cat-icon">{categoryIcons[cat.category] || <Utensils size={18} />}</span>
-                <span className="cat-label">{cat.category}</span>
+                <span className="pill-icon">{categoryIcons[cat.category]}</span>
+                <span className="pill-text">{cat.category}</span>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Main Content Grid */}
-        <div className="menu-content-grid">
-          {/* Left Column: Menu List */}
-          <div className="menu-list-container">
-            <div className="section-subtitle">
-              Authentic {activeCategory}
-            </div>
-            
-            <div className="menu-items-list">
-              {activeData.items.map((item, index) => (
-                <div key={`${item.name}-${index}`} className="menu-item-row">
-                  <div className="item-top-row">
-                    <div className="item-name">{item.name.toUpperCase()}</div>
-                    {item.price && (
-                      <>
-                        <div className="leader-line"></div>
-                        <div className="item-price">{item.price}</div>
-                        <motion.a
-                          href={`https://wa.me/971555429243?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name}${item.price ? ` (${item.price})` : ''} from the ${activeCategory} menu.`)}`}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="item-order-btn"
-                          title={`Order ${item.name} via WhatsApp`}
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <MessageCircle size={11} />
-                          Order
-                        </motion.a>
-                      </>
-                    )}
+        {/* Menu Items Grid */}
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="menu-items-grid-v2"
+          >
+            {activeData.items.map((item, index) => (
+              <motion.div 
+                key={`${item.name}-${index}`}
+                className="dish-card-premium"
+                whileHover={{ y: -5 }}
+              >
+                <div className="dish-image-box">
+                  <img src={currentImage} alt={item.name} className="dish-img" />
+                </div>
+                <div className="dish-info-box">
+                  <div className="dish-header">
+                    <h3 className="dish-name">{item.name}</h3>
+                    <div className="dish-price">{item.price}</div>
+                  </div>
+                  <p className="dish-desc">Prepared with authentic Himalayan spices and fresh ingredients.</p>
+                  <div className="dish-actions">
+                    <motion.a
+                      href={`https://wa.me/971555429243?text=${encodeURIComponent(`Hello! I'd like to order: ${item.name}${item.price ? ` (${item.price})` : ''} from the ${activeCategory} menu.`)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="order-btn-link"
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <MessageCircle size={14} />
+                      Order Now
+                    </motion.a>
                   </div>
                 </div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
-            <div className="menu-cta">
-              <motion.a
-                href={`https://wa.me/971555429243?text=${encodeURIComponent(`Hello! I'd like to order from the ${activeCategory} menu.`)}`}
-                target="_blank"
-                rel="noreferrer"
-                className="whatsapp-order-btn"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                ORDER VIA WHATSAPP <ArrowRight size={18} />
-              </motion.a>
-            </div>
-          </div>
-
-          {/* Right Column: Featured Image */}
-          <div className="menu-image-container">
-            <motion.div 
-              key={activeCategory}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="featured-image-wrapper"
-            >
-              <img src={currentImage} alt={activeCategory} className="featured-food-img" />
-            </motion.div>
-          </div>
+        <div className="menu-footer-cta">
+          <p>Don't see what you're looking for?</p>
+          <a 
+            href="https://wa.me/971555429243" 
+            target="_blank" 
+            rel="noreferrer"
+            className="full-menu-wa-btn"
+          >
+            Chat with us on WhatsApp
+          </a>
         </div>
       </div>
 
       <style jsx>{`
+        .menu-page {
+          background-color: var(--menu-bg-light) !important;
+        }
+
         .menu-header-container {
-          display: flex;
-          justify-content: center;
-          margin-bottom: 60px;
+          padding: 60px 0 40px;
+          background: linear-gradient(to bottom, #ffffff, var(--menu-bg-light));
         }
 
-        .menu-header-decorative {
-          display: flex;
-          align-items: center;
-          gap: 30px;
+        .menu-subtitle-elegant {
+          display: block;
+          font-family: var(--font-sans);
+          font-size: 14px;
+          font-weight: 600;
+          color: var(--menu-green-bright);
+          letter-spacing: 3px;
+          margin-bottom: 12px;
+          text-transform: uppercase;
         }
 
-        .header-line {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .header-line.rotate {
-          flex-direction: row;
-        }
-
-        .line {
-          height: 1px;
-          width: clamp(100px, 15vw, 250px);
-          background: #2d6a2d;
-          opacity: 0.5;
-        }
-
-        .dot {
-          width: 4px;
-          height: 4px;
-          background: #2d6a2d;
-          border-radius: 50%;
-        }
-
-        .dot.big {
-          width: 6px;
-          height: 6px;
-        }
-
-        .menu-title {
+        .menu-title-premium {
           font-family: var(--font-serif);
-          font-size: clamp(40px, 6vw, 64px);
-          color: #1e4d1e;
-          font-weight: 400;
-          margin: 0;
-          text-transform: capitalize;
+          font-size: clamp(36px, 5vw, 56px);
+          color: var(--menu-green-dark);
+          margin-bottom: 24px;
+          font-weight: 700;
         }
 
-        .menu-categories-wrapper {
-          background: #f5f0e8;
-          border-radius: 999px;
-          display: inline-flex;
-          justify-content: center;
-          margin: 0 auto 36px auto;
-          max-width: 100%;
-          overflow-x: auto;
-          padding: 8px 10px;
+        .menu-header-divider {
           display: flex;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-          scrollbar-width: none;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
         }
 
-        .menu-categories-wrapper::-webkit-scrollbar {
+        .menu-header-divider .line {
+          height: 1px;
+          width: 60px;
+          background: var(--menu-green-bright);
+          opacity: 0.4;
+        }
+
+        .menu-header-divider .icon {
+          color: var(--menu-green-bright);
+        }
+
+        .menu-nav-container {
+          margin-bottom: 50px;
+          position: sticky;
+          top: 100px;
+          z-index: 100;
+          background: var(--menu-bg-light);
+          padding: 10px 0;
+        }
+
+        .menu-categories-pills {
+          display: flex;
+          gap: 12px;
+          overflow-x: auto;
+          padding: 10px 5px;
+          scrollbar-width: none;
+          justify-content: center;
+        }
+
+        .menu-categories-pills::-webkit-scrollbar {
           display: none;
         }
 
-        .menu-categories {
+        .menu-pill {
           display: flex;
-          gap: 8px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .category-btn {
-          display: inline-flex;
           align-items: center;
           gap: 8px;
+          padding: 12px 24px;
           background: #ffffff;
-          border: 1.5px solid #d0d0d0;
-          color: #1a3a1a;
-          padding: 10px 20px;
+          border: 1px solid rgba(0,0,0,0.05);
+          border-radius: 50px;
+          color: var(--menu-green-dark);
           font-family: var(--font-sans);
-          font-size: 13px;
           font-weight: 600;
-          letter-spacing: 0.3px;
+          font-size: 14px;
           cursor: pointer;
-          transition: all 0.25s ease;
-          border-radius: 999px;
+          transition: all 0.3s ease;
           white-space: nowrap;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .cat-icon {
+        .menu-pill:hover {
+          border-color: var(--menu-green-bright);
+          color: var(--menu-green-bright);
+        }
+
+        .menu-pill.active {
+          background: var(--menu-green-dark);
+          color: #ffffff;
+          border-color: var(--menu-green-dark);
+          box-shadow: 0 4px 15px rgba(29, 61, 47, 0.2);
+        }
+
+        .pill-icon {
           display: flex;
           align-items: center;
-          color: #2d6a2d;
-          flex-shrink: 0;
+          opacity: 0.8;
         }
 
-        .cat-label {
-          text-transform: capitalize;
-          font-size: 13px;
-        }
-
-        .category-btn.active {
-          background: #1e4d1e;
-          border-color: #1e4d1e;
-          color: #ffffff;
-        }
-
-        .category-btn.active .cat-icon {
-          color: #ffffff;
-        }
-
-        .category-btn:hover:not(.active) {
-          background: #f0f7f0;
-          border-color: #2d6a2d;
-          color: #1a3a1a;
-        }
-
-        .menu-content-grid {
+        .menu-items-grid-v2 {
           display: grid;
-          grid-template-columns: 1.2fr 0.8fr;
-          gap: 80px;
-          align-items: flex-start;
-          padding-bottom: 100px;
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          gap: 30px;
+          padding-bottom: 60px;
         }
 
-        .section-subtitle {
-          font-family: var(--font-serif);
-          font-size: 32px;
-          color: #1e4d1e;
-          margin-bottom: 40px;
-          font-weight: 400;
-          text-align: center;
-        }
-
-        .section-subtitle.extra-top {
-          margin-top: 60px;
-        }
-
-        .menu-items-list {
+        .dish-card-premium {
           display: flex;
-          flex-direction: column;
-          gap: 12px;
+          background: #ffffff;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          border: 1px solid rgba(0,0,0,0.03);
         }
 
-        .menu-item-row {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          padding: 14px 0;
-          border-bottom: 1px solid rgba(0,0,0,0.07);
-        }
-
-        .item-top-row {
-          display: flex;
-          align-items: baseline;
-          gap: 12px;
-          width: 100%;
-        }
-
-        .item-order-btn {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-          border: none;
-          color: #fff;
-          padding: 6px 14px;
-          border-radius: 999px;
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.6px;
-          text-decoration: none;
-          white-space: nowrap;
-          flex-shrink: 0;
-          transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-          text-transform: uppercase;
-          box-shadow: 0 2px 8px rgba(37, 211, 102, 0.35);
-          position: relative;
+        .dish-image-box {
+          width: 140px;
+          min-width: 140px;
+          height: auto;
           overflow: hidden;
         }
 
-        .item-order-btn::before {
-          content: '';
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
-          border-radius: 999px;
-          pointer-events: none;
-        }
-
-        .item-order-btn:hover {
-          transform: translateY(-2px) scale(1.04);
-          box-shadow: 0 6px 20px rgba(37, 211, 102, 0.55);
-          background: linear-gradient(135deg, #2de070 0%, #0fa37a 100%);
-        }
-
-        .item-order-btn:hover svg {
-          animation: iconPulse 0.6s ease infinite alternate;
-        }
-
-        @keyframes iconPulse {
-          from { transform: scale(1); }
-          to   { transform: scale(1.25); }
-        }
-
-        .item-name {
-          font-family: var(--font-sans);
-          font-weight: 700;
-          font-size: 16px;
-          color: #1a1a1a;
-          white-space: nowrap;
-          flex-shrink: 0;
-        }
-
-        .leader-line {
-          flex-grow: 1;
-          height: 1px;
-          border-bottom: 2px dotted rgba(45, 106, 45, 0.25);
-          transform: translateY(-4px);
-        }
-
-        .item-price {
-          font-family: var(--font-sans);
-          font-weight: 700;
-          font-size: 18px;
-          color: #1e4d1e;
-          white-space: nowrap;
-          flex-shrink: 0;
-        }
-
-        .menu-image-container {
-          position: sticky;
-          top: 150px;
-        }
-
-        .featured-image-wrapper {
-          border-radius: 12px;
-          overflow: hidden;
-          box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-          aspect-ratio: 1/1;
-          max-height: 480px;
-        }
-
-        .featured-food-img {
+        .dish-img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          display: block;
+          transition: transform 0.6s ease;
         }
 
-        .menu-cta {
-          margin-top: 60px;
+        .dish-card-premium:hover .dish-img {
+          transform: scale(1.1);
+        }
+
+        .dish-info-box {
+          padding: 20px;
+          flex-grow: 1;
           display: flex;
-          justify-content: center;
+          flex-direction: column;
         }
 
-        .whatsapp-order-btn {
+        .dish-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 8px;
+          gap: 10px;
+        }
+
+        .dish-name {
+          font-family: var(--font-serif);
+          font-size: 18px;
+          color: var(--menu-green-dark);
+          font-weight: 700;
+          margin: 0;
+          line-height: 1.3;
+        }
+
+        .dish-price {
+          font-family: var(--font-sans);
+          font-size: 16px;
+          color: var(--menu-green-bright);
+          font-weight: 700;
+          white-space: nowrap;
+        }
+
+        .dish-desc {
+          font-size: 13px;
+          color: #666;
+          margin-bottom: 18px;
+          line-height: 1.5;
+          flex-grow: 1;
+        }
+
+        .dish-actions {
+          margin-top: auto;
+        }
+
+        .order-btn-link {
           display: inline-flex;
           align-items: center;
-          gap: 12px;
-          background: #1e4d1e;
+          gap: 8px;
+          background: var(--menu-green-bright);
+          color: #ffffff;
+          padding: 8px 18px;
+          border-radius: 8px;
+          font-size: 13px;
+          font-weight: 600;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+
+        .order-btn-link:hover {
+          background: var(--menu-green-dark);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(43, 182, 115, 0.3);
+        }
+
+        .menu-footer-cta {
+          text-align: center;
+          margin-top: 40px;
+          padding: 40px;
+          background: #ffffff;
+          border-radius: 20px;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+          margin-bottom: 100px;
+        }
+
+        .menu-footer-cta p {
+          font-size: 18px;
+          color: var(--menu-green-dark);
+          margin-bottom: 20px;
+          font-family: var(--font-serif);
+        }
+
+        .full-menu-wa-btn {
+          display: inline-block;
+          background: #25D366;
           color: #fff;
-          padding: 16px 40px;
+          padding: 15px 35px;
           border-radius: 50px;
           font-weight: 700;
           text-decoration: none;
-          letter-spacing: 1.5px;
           transition: all 0.3s ease;
-          font-size: 14px;
         }
 
-        .whatsapp-order-btn:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 10px 20px rgba(30, 77, 30, 0.25);
-        }
-
-        @media (max-width: 1024px) {
-          .menu-content-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-          }
-
-          .menu-image-container {
-            position: relative;
-            top: auto;
-            order: -1;
-          }
-
-          .featured-image-wrapper {
-            aspect-ratio: 16/9;
-            max-width: 600px;
-            margin: 0 auto;
-          }
+        .full-menu-wa-btn:hover {
+          background: #128C7E;
+          transform: scale(1.05);
         }
 
         @media (max-width: 768px) {
-          .header-line .line { width: 30px; }
-
-          .menu-title { font-size: 28px; }
-
-          .menu-header-container { margin-bottom: 30px; }
-
-          .menu-categories-wrapper {
-            border-radius: 16px;
-            padding: 10px;
-            margin-bottom: 24px;
+          .menu-items-grid-v2 {
+            grid-template-columns: 1fr;
+            gap: 20px;
           }
 
-          .menu-categories {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            flex-wrap: unset;
-            gap: 8px;
-            overflow-x: unset;
-            justify-content: unset;
-          }
-
-          .category-btn {
-            padding: 10px 12px;
-            font-size: 12px;
-            flex-shrink: unset;
-            justify-content: center;
-            width: 100%;
-          }
-
-          .cat-label { font-size: 12px; }
-
-          .menu-image-container { display: none; }
-
-          .section-subtitle {
-            font-size: 20px;
-            margin-bottom: 20px;
-          }
-
-          .menu-items-list { gap: 10px; }
-
-          .menu-item-row {
+          .dish-card-premium {
             flex-direction: column;
-            gap: 0;
-            padding: 0;
-            border-bottom: none;
-            background: #f8faf8;
-            border: 1px solid rgba(45, 106, 45, 0.15);
-            border-radius: 12px;
-            padding: 14px 16px;
           }
 
-          .item-top-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
-            margin-bottom: 10px;
-          }
-
-          .item-name {
-            font-size: 13px;
-            white-space: normal;
-            word-break: break-word;
-            flex: 1;
-          }
-
-          .item-price {
-            font-size: 13px;
-            font-weight: 700;
-            color: #d1a257;
-            white-space: nowrap;
-            flex-shrink: 0;
-          }
-
-          .leader-line { display: none; }
-
-          .item-order-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
+          .dish-image-box {
             width: 100%;
-            padding: 10px 0;
+            height: 200px;
+          }
+
+          .menu-nav-container {
+            top: 70px;
+          }
+
+          .menu-pill {
+            padding: 10px 18px;
             font-size: 12px;
-            border-radius: 12px;
-            border: none;
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            box-shadow: 0 3px 12px rgba(37, 211, 102, 0.35);
-            color: #fff;
-          }
-
-          .item-order-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.5);
-          }
-
-          .menu-cta { margin-top: 30px; }
-
-          .whatsapp-order-btn {
-            padding: 14px 28px;
-            font-size: 13px;
-            width: 100%;
-            justify-content: center;
           }
         }
       `}</style>

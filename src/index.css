@@ -28,6 +28,11 @@
   
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --border-radius: 12px;
+
+  /* Star Momo Inspired colors */
+  --menu-green-dark: #1D3D2F;
+  --menu-green-bright: #2BB673;
+  --menu-bg-light: #F8F9FA;
 }
 
 * {
