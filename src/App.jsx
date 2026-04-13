@@ -310,7 +310,7 @@ function App() {
                     </motion.p>
                     <motion.div
                       className="hero-cta-wrapper"
-                      style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'flex-start' }}
+                      style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}
                       initial={{ opacity: 0, y: 16 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.15, duration: 0.5 }}
@@ -325,14 +325,6 @@ function App() {
                     </motion.div>
                   </motion.div>
 
-                  <motion.div 
-                    className="hero-main-image-wrapper"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: easeOutExpo }}
-                  >
-                    <img src={heroImg} alt="Pahuna Ghar Specialty" className="hero-main-image" />
-                  </motion.div>
 
 
               </div>
