@@ -29,6 +29,16 @@ import soupImg from '../assets/menu_soup.png';
 import eggsImg from '../assets/menu_eggs.png';
 import vegetablesImg from '../assets/menu_vegetables.png';
 
+// New Menu Images based on assets
+import chickenChowminImg from '../assets/chicken chowmin all .png';
+import vegChowminImg from '../assets/veg chowmin.png';
+import fryMomoImg from '../assets/fry momo.png';
+import steamMomoImg from '../assets/steam momo.png';
+import momoPlatterImg from '../assets/momo plater.png';
+import thukpaImg from '../assets/thupa.png';
+import muttonPakuImg from '../assets/mutton paku.png';
+import pakuChiliImg from '../assets/paku chili new 30 aed price.png';
+
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
 
@@ -46,8 +56,8 @@ const menuData = [
       { name: 'Sukuti Set (Buff)', price: '17 Dhs' },
       { name: 'Fish Set', price: '14 Dhs' },
       { name: 'Paya Set', price: '15 Dhs' },
-      { name: 'Mutton Set', price: '18 Dhs' },
-      { name: 'Mutton Masala Set', price: '20 Dhs' },
+      { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonPakuImg },
+      { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonPakuImg },
       { name: 'Bhutan Set', price: '17 Dhs' },
       { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs' },
     ],
@@ -67,27 +77,28 @@ const menuData = [
   },
   {
     category: 'MO:MO',
-    img: momoImg,
+    img: momoPlatterImg,
     items: [
-      { name: 'Steam Momo Chicken', price: '11 Dhs' },
-      { name: 'Steam Momo Buff', price: '12 Dhs' },
-      { name: 'Fry Momo (Chicken / Buff)', price: '13 Dhs' },
+      { name: 'Steam Momo Chicken', price: '11 Dhs', itemImg: steamMomoImg },
+      { name: 'Steam Momo Buff', price: '12 Dhs', itemImg: steamMomoImg },
+      { name: 'Fry Momo (Chicken / Buff)', price: '13 Dhs', itemImg: fryMomoImg },
       { name: 'Jhol Momo (Chicken / Buff)', price: '15 Dhs' },
       { name: 'C-Momo (Chicken / Buff)', price: '15 Dhs' },
     ],
   },
   {
     category: 'CHOWMEIN / THUKPA',
-    img: chowmeinImg,
+    img: chickenChowminImg,
     items: [
-      { name: 'Chowmein (Veg / Chicken)', price: '' },
-      { name: 'Chowmein Egg', price: '' },
-      { name: 'Chowmein Buff', price: '' },
-      { name: 'Chowmein Mix', price: '' },
-      { name: 'Thukpa Veg', price: '' },
-      { name: 'Thukpa (Chicken / Egg)', price: '' },
-      { name: 'Paya Thukpa', price: '' },
-      { name: 'Thukpa Mix', price: '' },
+      { name: 'Chowmein Veg', price: '11 Dhs', itemImg: vegChowminImg },
+      { name: 'Chowmein Chicken', price: '13 Dhs', itemImg: chickenChowminImg },
+      { name: 'Chowmein Egg', price: '12 Dhs' },
+      { name: 'Chowmein Buff', price: '14 Dhs' },
+      { name: 'Chowmein Mix', price: '15 Dhs' },
+      { name: 'Thukpa Veg', price: '11 Dhs', itemImg: thukpaImg },
+      { name: 'Thukpa (Chicken / Egg)', price: '13 Dhs', itemImg: thukpaImg },
+      { name: 'Paya Thukpa', price: '15 Dhs', itemImg: thukpaImg },
+      { name: 'Thukpa Mix', price: '15 Dhs', itemImg: thukpaImg },
     ],
   },
   {
@@ -140,7 +151,7 @@ const menuData = [
   {
     category: 'NON-VEG',
     items: [
-      { name: 'Chicken Chilly (Regular / Large)', price: '10/20 Dhs' },
+      { name: 'Chicken Chilly (Regular / Large)', price: '10/20 Dhs', itemImg: pakuChiliImg },
       { name: 'Chicken Fry', price: '5/10/15 Dhs' },
       { name: 'Chicken Masala (Half / Full)', price: '5/10 Dhs' },
       { name: 'Chicken Choila', price: '5/10/15 Dhs' },
@@ -281,7 +292,7 @@ const MenuPage = () => {
                 whileHover={{ y: -5 }}
               >
                 <div className="dish-image-box">
-                  <img src={currentImage} alt={item.name} className="dish-img" />
+                  <img src={item.itemImg || currentImage} alt={item.name} className="dish-img" />
                 </div>
                 <div className="dish-info-box">
                   <div className="dish-header">
