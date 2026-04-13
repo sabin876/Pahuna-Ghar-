@@ -80,7 +80,7 @@ const assetModules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp,svg}', {
 
 const logoImg = assetModules['/src/assets/logo3.png'] || assetModules['/src/assets/Logo.jpeg'] || assetModules['/src/assets/logo.jpeg'] || assetModules['/src/assets/logo.png'];
 const heroImg = assetModules['/src/assets/Hero section.png'];
-const heroBgImg = assetModules['/src/assets/Hero section.webp'];
+const heroBgImg = assetModules['/src/assets/Hero section.png'];
 const contentBgImg = assetModules['/src/assets/contnet Bg.jpeg'];
 const thakaliImg = assetModules['/src/assets/Nepali Thali set.webp'];
 const dhidoImg = assetModules['/src/assets/Dhido set.webp'];
