@@ -283,7 +283,7 @@ function App() {
                     </motion.span>
                     <h1 className="hero-title">
                       <motion.span
-                        style={{ color: 'var(--secondary)', display: 'block', marginBottom: '10px' }}
+                        style={{ color: '#ffffff', display: 'block', marginBottom: '10px' }}
                         initial={{ opacity: 0, y: 48, rotateX: -25 }}
                         animate={{ opacity: 1, y: 0, rotateX: 0 }}
                         transition={{ duration: 0.75, delay: 0.65, ease: easeOutExpo }}
@@ -295,7 +295,7 @@ function App() {
                         initial={{ opacity: 0, letterSpacing: '0.35em' }}
                         animate={{ opacity: 1, letterSpacing: '0.06em' }}
                         transition={{ duration: 0.9, delay: 0.85, ease: easeOutExpo }}
-                        style={{ display: 'block' }}
+                        style={{ display: 'block', color: '#ffffff' }}
                       >
                         RESTAURANT LLC
                       </motion.span>
