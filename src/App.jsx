@@ -247,11 +247,11 @@ function App() {
             <motion.div
               className="hero-bg"
               style={{
-                backgroundImage: `linear-gradient(120deg, rgba(0,25,0,0.88) 0%, rgba(0,0,0,0.7) 50%, rgba(0,20,0,0.85) 100%), url("${heroBgImg}")`,
+                backgroundImage: `url("${heroBgImg}")`,
               }}
               animate={{ 
-                scale: [1, 1.08, 1],
-                rotate: [0, 0.5, 0]
+                scale: [1.02, 1, 1.02],
+                rotate: [0, 0, 0]
               }}
               transition={{ 
                 duration: 20, 
