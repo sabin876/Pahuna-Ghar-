@@ -231,11 +231,9 @@ function App() {
 
             <motion.div
               className="hero-bg"
-              initial={{ scale: 1.1, x: "0%", y: "0%" }}
               animate={{ 
-                scale: [1.1, 1.2, 1.1],
-                x: ["0%", "-1%", "1%", "0%"],
-                y: ["0%", "1%", "-1%", "0%"]
+                scale: [1.02, 1, 1.02],
+                rotate: [0, 0, 0]
               }}
               transition={{ 
                 duration: 20, 
