@@ -15,7 +15,9 @@ import {
   ArrowRight,
   Egg,
   Salad,
-  Drumstick
+  Drumstick,
+  Sparkles,
+  Beer
 } from 'lucide-react';
 import thaliImg from '../assets/menu_thali.png';
 import chowmeinImg from '../assets/Chowmein.webp';
@@ -38,6 +40,11 @@ import momoPlatterImg from '../assets/momo plater.png';
 import thukpaImg from '../assets/thupa.png';
 import muttonPakuImg from '../assets/mutton paku.png';
 import pakuChiliImg from '../assets/paku chili new 30 aed price.png';
+import waterImg from '../assets/water.webp';
+import cokeSpriteImg from '../assets/coke Sprite.jpg';
+import redBullImg from '../assets/red bull.jpg';
+import boomBoomImg from '../assets/Boom Boom.jpg';
+import lassiImg from '../assets/Banana Lasi.jpg';
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
@@ -45,7 +52,7 @@ void motion;
 // Authentic realistic placeholder images mapped to each item
 const menuData = [
   {
-    category: 'NEPALI THALI SET',
+    category: 'Thakali Set',
     img: nepaliThaliImg,
     items: [
       { name: 'Veg Set', price: '11 Dhs' },
@@ -56,14 +63,14 @@ const menuData = [
       { name: 'Sukuti Set (Buff)', price: '17 Dhs' },
       { name: 'Fish Set', price: '14 Dhs' },
       { name: 'Paya Set', price: '15 Dhs' },
-      { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonPakuImg },
+       { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonPakuImg },
       { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonPakuImg },
       { name: 'Bhutan Set', price: '17 Dhs' },
-      { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs' },
+      { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs', itemImg: nepaliThaliImg },
     ],
   },
   {
-    category: 'DHIDO SET',
+    category: 'Dhido Set',
     img: dhidoImg,
     items: [
       { name: 'Mutton Dhido Set', price: '18 Dhs' },
@@ -76,18 +83,18 @@ const menuData = [
     ],
   },
   {
-    category: 'MO:MO',
+    category: 'Star Momo Special',
     img: momoPlatterImg,
     items: [
       { name: 'Steam Momo Chicken', price: '11 Dhs', itemImg: steamMomoImg },
       { name: 'Steam Momo Buff', price: '12 Dhs', itemImg: steamMomoImg },
       { name: 'Fry Momo (Chicken / Buff)', price: '13 Dhs', itemImg: fryMomoImg },
-      { name: 'Jhol Momo (Chicken / Buff)', price: '15 Dhs' },
-      { name: 'C-Momo (Chicken / Buff)', price: '15 Dhs' },
+      { name: 'Jhol Momo (Chicken / Buff)', price: '15 Dhs', itemImg: steamMomoImg },
+      { name: 'C-Momo (Chicken / Buff)', price: '15 Dhs', itemImg: fryMomoImg },
     ],
   },
   {
-    category: 'CHOWMEIN / THUKPA',
+    category: 'Sekuwa Set',
     img: chickenChowminImg,
     items: [
       { name: 'Chowmein Veg', price: '11 Dhs', itemImg: vegChowminImg },
@@ -102,16 +109,16 @@ const menuData = [
     ],
   },
   {
-    category: 'NEWARI KHAJA / TASS',
+    category: 'Taas Set',
     img: newariKhajaImg,
     items: [
-      { name: 'Newari Khaja Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs' },
-      { name: 'Tass Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs' },
-      { name: 'Combo Set (Chi/Buff/Mutton/Bhutan)', price: '20/25/25/25 Dhs' },
+      { name: 'Newari Khaja Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs', itemImg: newariKhajaImg },
+      { name: 'Tass Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs', itemImg: newariKhajaImg },
+      { name: 'Combo Set (Chi/Buff/Mutton/Bhutan)', price: '20/25/25/25 Dhs', itemImg: newariKhajaImg },
     ],
   },
   {
-    category: 'EGGS',
+    category: 'Chewra Set',
     img: eggsImg,
     items: [
       { name: 'Boiled Egg', price: '1 Dhs' },
@@ -121,7 +128,7 @@ const menuData = [
     ],
   },
   {
-    category: 'SADEKO ITEMS',
+    category: 'Special Khata',
     items: [
       { name: 'Sukuti Sadeko (S/M/L)', price: '10/18/30 Dhs' },
       { name: 'Chatpate (Half / Full)', price: '5/10 Dhs' },
@@ -132,7 +139,7 @@ const menuData = [
     ],
   },
   {
-    category: 'VEGETABLES',
+    category: 'Khaja Set',
     img: vegetablesImg,
     items: [
       { name: 'Karela Alu (Half/Full)', price: '3/5 Dhs' },
@@ -149,7 +156,7 @@ const menuData = [
     ],
   },
   {
-    category: 'NON-VEG',
+    category: 'Indian Cuisine',
     items: [
       { name: 'Chicken Chilly (Regular / Large)', price: '10/20 Dhs', itemImg: pakuChiliImg },
       { name: 'Chicken Fry', price: '5/10/15 Dhs' },
@@ -169,7 +176,7 @@ const menuData = [
     ],
   },
   {
-    category: 'BREAKFAST',
+    category: 'Breakfast',
     items: [
       { name: 'Chapatti', price: '1 Dhs' },
       { name: 'Plain Paratha', price: '2 Dhs' },
@@ -182,7 +189,7 @@ const menuData = [
     ],
   },
   {
-    category: 'FRY ITEMS',
+    category: 'Biryani / Fried Rice',
     img: fryItemsImg,
     items: [
       { name: 'Egg Fried Rice', price: '10 Dhs' },
@@ -201,14 +208,14 @@ const menuData = [
     ],
   },
   {
-    category: 'DRINKS',
+    category: 'Drinks',
     img: drinksImg,
     items: [
-      { name: 'Water', price: '1 Dhs' },
-      { name: 'Coke / Sprite', price: '3 Dhs' },
-      { name: 'Red Bull', price: '8 Dhs' },
-      { name: 'Boom Boom', price: '5 Dhs' },
-      { name: 'Banana Lassi / Milk Shake', price: '8 Dhs' },
+      { name: 'Water', price: '1 Dhs', itemImg: waterImg },
+      { name: 'Coke / Sprite', price: '3 Dhs', itemImg: cokeSpriteImg },
+      { name: 'Red Bull', price: '8 Dhs', itemImg: redBullImg },
+      { name: 'Boom Boom', price: '5 Dhs', itemImg: boomBoomImg },
+      { name: 'Banana Lassi / Milk Shake', price: '8 Dhs', itemImg: lassiImg },
       { name: 'Mango Juice / Watermelon Juice', price: '7 Dhs' },
       { name: 'Orange Juice / Pineapple Juice', price: '8 Dhs' },
     ],
@@ -216,19 +223,19 @@ const menuData = [
 ];
 
 const categoryIcons = {
-  'NEPALI THALI SET': <Utensils size={18} />,
-  'DHIDO SET': <Mountain size={18} />,
-  'MO:MO': <ChefHat size={18} />,
-  'CHOWMEIN / THUKPA': <Wheat size={18} />,
-  'NEWARI KHAJA / TASS': <UtensilsCrossed size={18} />,
-  'EGGS': <Egg size={18} />,
-  'SADEKO ITEMS': <Salad size={18} />,
-  'VEGETABLES': <Flame size={18} />,
-  'NON-VEG': <Drumstick size={18} />,
-  'BREAKFAST': <Coffee size={18} />,
-  'FRY ITEMS': <Star size={18} />,
+  'Thakali Set': <Utensils size={18} />,
+  'Dhido Set': <Mountain size={18} />,
+  'Star Momo Special': <Star size={18} />,
+  'Sekuwa Set': <Drumstick size={18} />,
+  'Taas Set': <Flame size={18} />,
+  'Chewra Set': <Wheat size={18} />,
+  'Special Khata': <Sparkles size={18} />,
+  'Khaja Set': <ChefHat size={18} />,
+  'Indian Cuisine': <UtensilsCrossed size={18} />,
+  'Breakfast': <Coffee size={18} />,
+  'Biryani / Fried Rice': <Soup size={18} />,
   'SOUP': <Soup size={18} />,
-  'DRINKS': <GlassWater size={18} />,
+  'Drinks': <GlassWater size={18} />,
 };
 
 const MenuPage = () => {
@@ -236,7 +243,7 @@ const MenuPage = () => {
   const activeData = menuData.find(cat => cat.category === activeCategory) || menuData[0];
   
   // Use the category image if available, otherwise fallback to the default thali image
-  const currentImage = activeData.img || thaliImg;
+  const currentCategoryBg = activeData.img || thaliImg;
 
   return (
     <div className="menu-page" style={{ backgroundColor: '#ffffff', minHeight: '100vh', color: '#1a1a1a', paddingTop: '120px' }}>
@@ -292,7 +299,7 @@ const MenuPage = () => {
                 whileHover={{ y: -5 }}
               >
                 <div className="dish-image-box">
-                  <img src={item.itemImg || currentImage} alt={item.name} className="dish-img" />
+                  <img src={item.itemImg || currentCategoryBg} alt={item.name} className="dish-img" />
                 </div>
                 <div className="dish-info-box">
                   <div className="dish-header">
@@ -389,51 +396,53 @@ const MenuPage = () => {
 
         .menu-categories-pills {
           display: flex;
-          gap: 12px;
-          overflow-x: auto;
-          padding: 10px 5px;
-          scrollbar-width: none;
+          flex-wrap: wrap;
+          gap: 16px;
           justify-content: center;
-        }
-
-        .menu-categories-pills::-webkit-scrollbar {
-          display: none;
+          padding: 20px 0;
         }
 
         .menu-pill {
           display: flex;
           align-items: center;
-          gap: 8px;
-          padding: 12px 24px;
+          gap: 10px;
+          padding: 10px 24px;
           background: #ffffff;
-          border: 1px solid rgba(0,0,0,0.05);
+          border: none;
           border-radius: 50px;
-          color: var(--menu-green-dark);
+          color: #2D3748;
           font-family: var(--font-sans);
-          font-weight: 600;
+          font-weight: 700;
           font-size: 14px;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           white-space: nowrap;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+          letter-spacing: 0.2px;
         }
 
         .menu-pill:hover {
-          border-color: var(--menu-green-bright);
-          color: var(--menu-green-bright);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+          color: var(--primary);
         }
 
         .menu-pill.active {
-          background: var(--menu-green-dark);
+          background: var(--primary);
           color: #ffffff;
-          border-color: var(--menu-green-dark);
-          box-shadow: 0 4px 15px rgba(29, 61, 47, 0.2);
+          box-shadow: 0 8px 20px rgba(26, 93, 26, 0.25);
+          transform: translateY(-1px);
+        }
+
+        .menu-pill.active .pill-icon {
+          color: #ffffff;
         }
 
         .pill-icon {
           display: flex;
           align-items: center;
-          opacity: 0.8;
+          color: var(--primary);
+          transition: color 0.3s ease;
         }
 
         .menu-items-grid-v2 {
