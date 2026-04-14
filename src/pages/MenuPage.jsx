@@ -421,12 +421,35 @@ const MenuPage = () => {
           padding: 10px 0;
         }
 
+        .menu-nav-container::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 40px;
+          height: 100%;
+          background: linear-gradient(to left, var(--menu-bg-light), transparent);
+          pointer-events: none;
+          z-index: 101;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
         .menu-categories-pills {
           display: flex;
           flex-wrap: wrap;
           gap: 16px;
           justify-content: center;
           padding: 20px 0;
+        }
+
+        /* Scrollbar Hide Utility */
+        .menu-categories-pills::-webkit-scrollbar {
+          display: none;
+        }
+        .menu-categories-pills {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
 
         .menu-pill {
@@ -605,9 +628,19 @@ const MenuPage = () => {
         }
 
         @media (max-width: 768px) {
+          .menu-header-container {
+            padding: 40px 0 20px;
+          }
+
+          .menu-title-premium {
+            font-size: 32px;
+            margin-bottom: 16px;
+          }
+
           .menu-items-grid-v2 {
             grid-template-columns: 1fr;
             gap: 20px;
+            padding: 0 10px 60px;
           }
 
           .dish-card-premium {
@@ -616,16 +649,44 @@ const MenuPage = () => {
 
           .dish-image-box {
             width: 100%;
-            height: 200px;
+            height: 220px;
           }
 
           .menu-nav-container {
             top: 70px;
+            margin-bottom: 30px;
+            padding: 5px 0;
+          }
+
+          .menu-nav-container::after {
+            opacity: 1;
+          }
+
+          .menu-categories-pills {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
+            padding: 15px 20px;
+            gap: 12px;
+            -webkit-overflow-scrolling: touch;
           }
 
           .menu-pill {
-            padding: 10px 18px;
-            font-size: 12px;
+            padding: 8px 18px;
+            font-size: 13px;
+            flex-shrink: 0;
+          }
+
+          .dish-info-box {
+            padding: 16px;
+          }
+
+          .dish-name {
+            font-size: 17px;
+          }
+
+          .dish-price {
+            font-size: 15px;
           }
         }
       `}</style>
