@@ -560,6 +560,9 @@ const MenuPage = () => {
           color: var(--menu-green-bright);
           font-weight: 700;
           white-space: nowrap;
+          background: rgba(43, 182, 115, 0.08);
+          padding: 4px 10px;
+          border-radius: 6px;
         }
 
         .dish-desc {

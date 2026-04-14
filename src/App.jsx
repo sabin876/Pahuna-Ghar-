@@ -266,9 +266,9 @@ function App() {
                     >
                       Experience the Authentic Taste of Nepal
                     </motion.span>
-                    <h1 className="hero-title">
+                    <h1 className="hero-title" style={{ maxWidth: '100%', margin: '0 auto 30px' }}>
                       <motion.span
-                        style={{ color: '#ffffff', display: 'block', marginBottom: '10px' }}
+                        style={{ color: '#ffffff', display: 'block', marginBottom: '8px', fontSize: 'clamp(28px, 8vw, 68px)' }}
                         initial={{ opacity: 0, y: 48, rotateX: -25 }}
                         animate={{ opacity: 1, y: 0, rotateX: 0 }}
                         transition={{ duration: 0.75, delay: 0.65, ease: easeOutExpo }}
@@ -280,7 +280,7 @@ function App() {
                         initial={{ opacity: 0, letterSpacing: '0.35em' }}
                         animate={{ opacity: 1, letterSpacing: '0.06em' }}
                         transition={{ duration: 0.9, delay: 0.85, ease: easeOutExpo }}
-                        style={{ display: 'block', color: '#ffffff' }}
+                        style={{ display: 'block', color: '#ffffff', fontSize: 'clamp(14px, 4vw, 24px)' }}
                       >
                         RESTAURANT LLC
                       </motion.span>
@@ -359,8 +359,19 @@ function App() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
+                  style={{ marginBottom: '24px' }}
                 >
-                  Welcome to Pahuna Ghar, where you can taste every flavor. Finding the best Thakali Khana set in Dubai is made easy with Pahuna Ghar. At Pahuna Ghar we bring the authentic tastes of Mustang right to your table where tradition meets the taste.
+                  Welcome to Pahuna Ghar, where you can taste every flavor. Finding the best Thakali Khana set in Dubai is made easy with Pahuna Ghar. 
+                </motion.p>
+
+                <motion.p 
+                  className="history-paragraph"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  style={{ marginBottom: '24px' }}
+                >
+                  At Pahuna Ghar, we bring the authentic tastes of Mustang right to your table, where tradition meets the perfect taste. Each bite brings the true essence of Nepali culture and the glorious Himalayas.
                 </motion.p>
 
                 <motion.p 
@@ -369,7 +380,7 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Each taste of the meal brings the true taste of Nepali culture and the Himalayas. Our food is not just food but also about connecting you to Nepal's rich traditions. Our thakali khana set is the perfect mix of flavor and texture, which satisfies your taste buds and feel like you are in the Himalayas.
+                  Our food is about connecting you to Nepal's rich heritage. Our thakali khana set is the perfect harmony of flavor and texture, satisfied your cravings and making you feel as if you are in the heart of the mountains.
                 </motion.p>
 
 

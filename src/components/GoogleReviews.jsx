@@ -128,6 +128,27 @@ const GoogleReviews = () => {
           </motion.a>
         </motion.div>
       </div>
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .section-title {
+            font-size: 1.8rem !important;
+            padding: 0 10px;
+            margin-bottom: 20px !important;
+          }
+          
+          .google-rating-summary {
+            margin-top: 10px;
+          }
+          
+          .rating-value {
+            font-size: 1.2rem;
+          }
+          
+          .rating-stats {
+            gap: 10px;
+          }
+        }
+      `}</style>
     </section>
   );
 };
