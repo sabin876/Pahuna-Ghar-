@@ -636,8 +636,10 @@ const MenuPage = () => {
           }
 
           .menu-title-premium {
-            font-size: 32px;
-            margin-bottom: 16px;
+            font-size: clamp(28px, 8vw, 36px);
+            margin-bottom: 12px;
+            padding: 0 15px;
+            line-height: 1.2;
           }
 
           .menu-items-grid-v2 {
