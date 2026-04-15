@@ -67,7 +67,8 @@ const assetModules = import.meta.glob('/src/assets/*.{png,jpg,jpeg,webp,svg}', {
 });
 
 const logoImg = assetModules['/src/assets/logo3.png'] || assetModules['/src/assets/Logo.jpeg'] || assetModules['/src/assets/logo.jpeg'] || assetModules['/src/assets/logo.png'];
-const heroBgImg = assetModules['/src/assets/Hero section.png'];
+const heroBgImg = assetModules['/src/assets/Hero section.webp'];
+const heroSideImg = assetModules['/src/assets/Hero section.png'];
 const contentBgImg = assetModules['/src/assets/contnet Bg.jpeg'];
 
 function App() {
@@ -280,7 +281,7 @@ function App() {
                         initial={{ opacity: 0, letterSpacing: '0.35em' }}
                         animate={{ opacity: 1, letterSpacing: '0.06em' }}
                         transition={{ duration: 0.9, delay: 0.85, ease: easeOutExpo }}
-                        style={{ display: 'block', color: '#ffffff', fontSize: 'clamp(14px, 4vw, 24px)' }}
+                        style={{ display: 'block', color: '#ffffff', fontSize: 'clamp(14px, 4vw, 24px)', textAlign: 'inherit' }}
                       >
                         RESTAURANT LLC
                       </motion.span>
@@ -290,12 +291,13 @@ function App() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.05, duration: 0.6 }}
+                      style={{ margin: '0 0 40px' }}
                     >
                       Bringing the legendary Himalayan flavors to the heart of Dubai. Hand-crafted dumplings, traditional spices, and warm hospitality.
                     </motion.p>
                     <motion.div
                       className="hero-cta-wrapper"
-                      style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}
+                      style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'flex-start' }}
                       initial={{ opacity: 0, y: 16 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.15, duration: 0.5 }}
@@ -308,6 +310,22 @@ function App() {
                         <span>Call Now</span>
                       </motion.a>
                     </motion.div>
+                  </motion.div>
+
+                  <motion.div
+                    className="hero-image-content"
+                    initial={{ opacity: 0, x: 60, scale: 0.9 }}
+                    animate={{ opacity: 1, x: 0, scale: 1 }}
+                    transition={{ duration: 0.9, delay: 0.5, ease: easeOutExpo }}
+                  >
+                    <div className="hero-image-wrapper">
+                      <img 
+                        src={heroSideImg} 
+                        alt="Authentic Nepalese Cuisine" 
+                        className="hero-side-image"
+                      />
+                      <div className="hero-image-decorative-ring"></div>
+                    </div>
                   </motion.div>
 
 
