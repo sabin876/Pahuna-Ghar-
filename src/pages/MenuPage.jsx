@@ -97,6 +97,15 @@ import localChickenImg from '../assets/Local Chicken.jpg';
 import localMuttonImg from '../assets/Local Mutton.jpg';
 import paneerMasalaImg from '../assets/Paneer Masala.jpg';
 import payaImg from '../assets/Paya.jpg';
+import beansAluImg from '../assets/Beans Alu.jpg';
+import broccoliAluImg from '../assets/Broccoli Alu.jpg';
+import cauliflowerAluImg from '../assets/Cauliflower Alu.jpg';
+import chanaAluImg from '../assets/Chana Alu.jpg';
+import mushroomAluImg from '../assets/Mushroom Alu.jpg';
+import palakPaneerImg from '../assets/Palak Paneer.jpg';
+import rajmaAluImg from '../assets/Rajma Alu.jpg';
+import vindiAluImg from '../assets/Vindi Alu.jpg';
+import saagGreenImg from '../assets/saag Green.jpg';
 
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
@@ -204,16 +213,16 @@ const menuData = [
     img: vegetablesImg,
     items: [
       { name: 'Karela Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Cauliflower Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Mushroom Alu (Half/Full)', price: '3/5 Dhs', itemImg: mushroomThakaliImg },
-      { name: 'Broccoli Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Vindi Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Beans Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Rajma Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Chana Alu (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Saag Green (Half/Full)', price: '3/5 Dhs' },
+      { name: 'Cauliflower Alu (Half/Full)', price: '3/5 Dhs', itemImg: cauliflowerAluImg },
+      { name: 'Mushroom Alu (Half/Full)', price: '3/5 Dhs', itemImg: mushroomAluImg },
+      { name: 'Broccoli Alu (Half/Full)', price: '3/5 Dhs', itemImg: broccoliAluImg },
+      { name: 'Vindi Alu (Half/Full)', price: '3/5 Dhs', itemImg: vindiAluImg },
+      { name: 'Beans Alu (Half/Full)', price: '3/5 Dhs', itemImg: beansAluImg },
+      { name: 'Rajma Alu (Half/Full)', price: '3/5 Dhs', itemImg: rajmaAluImg },
+      { name: 'Chana Alu (Half/Full)', price: '3/5 Dhs', itemImg: chanaAluImg },
+      { name: 'Saag Green (Half/Full)', price: '3/5 Dhs', itemImg: saagGreenImg },
       { name: 'Paneer Masala (Half / Full)', price: '6/10 Dhs', itemImg: paneerMasalaImg },
-      { name: 'Palak Paneer (Half / Full)', price: '6/10 Dhs', itemImg: paneerTikkaImg },
+      { name: 'Palak Paneer (Half / Full)', price: '6/10 Dhs', itemImg: palakPaneerImg },
     ],
   },
   {
