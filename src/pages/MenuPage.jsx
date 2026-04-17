@@ -64,6 +64,40 @@ import muttonThakaliImg from '../assets/mutoon thakali.jpg';
 import mushroomThakaliImg from '../assets/mushroom thakali.jpg';
 import paneerTikkaImg from '../assets/paneer tika.png';
 import dalMakhniImg from '../assets/dal makhni.png';
+import aluParathaImg from '../assets/Alu Paratha.jpg';
+import andaImg from '../assets/Anda.jpg';
+import chanaImg from '../assets/Chana.jpg';
+import chapattiImg from '../assets/Chapatti.jpg';
+import omeletteParathaImg from '../assets/Omelette Paratha.jpg';
+import plainParathaImg from '../assets/Plain Paratha.jpg';
+import sausageImg from '../assets/Sausage.jpg';
+import specialKhajaSetImg from '../assets/Special Khaja set.jpg';
+import sekuwaComboImg from '../assets/chicken mutton sekwa combo .png';
+import momoChowmeinComboImg from '../assets/momo chowmein combo.jpg';
+import mushroomSoupImg from '../assets/mushroom shoup.png';
+import muttonKadaiImg from '../assets/mutton kadai .png';
+import muttonPakuImg from '../assets/mutton paku.png';
+import rotiSetImg from '../assets/roti set.png';
+import rotiImg from '../assets/roti.png';
+import soupDefaultImg from '../assets/shoup.png';
+import specialComboBuffImg from '../assets/special combo buff .jpg';
+import specialComboImg from '../assets/special combo.jpg';
+import jumboComboImg from '../assets/jumbo combo.jpg';
+import tandooriHalfImg from '../assets/tandori chicken half.png';
+import tandooriFullImg from '../assets/tandori chicken. fullpng.png';
+import thukpaMomoImg from '../assets/thupa momo.png';
+import fishImg from '../assets/Fish.jpg';
+import chickenDrumsticksImg from '../assets/Chicken Drumsticks Regular.jpg';
+import chickenFryImg from '../assets/Chicken Fry.jpg';
+import chickenLollipopImg from '../assets/Chicken Lollipop Regular.jpg';
+import chickenMasalaImg from '../assets/Chicken Masala.avif';
+import chickenWithJholImg from '../assets/Chicken with Jhol.jpg';
+import gizzardLiverImg from '../assets/Gizzard + Liver.jpg';
+import localChickenImg from '../assets/Local Chicken.jpg';
+import localMuttonImg from '../assets/Local Mutton.jpg';
+import paneerMasalaImg from '../assets/Paneer Masala.jpg';
+import payaImg from '../assets/Paya.jpg';
+
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
 void motion;
@@ -78,10 +112,10 @@ const menuData = [
       { name: 'Chicken Set (Normal)', price: '13 Dhs', itemImg: nepaliThaliImg },
       { name: 'Chicken Set (Local)', price: '15 Dhs', itemImg: nepaliThaliImg },
       { name: 'Chicken Choila / Fry / Chilly Set', price: '14 Dhs', itemImg: chickenChoilaImg },
-      { name: 'Sausage / Liver / Egg Set', price: '13 Dhs' },
+      { name: 'Sausage / Liver / Egg Set', price: '13 Dhs', itemImg: sausageImg },
       { name: 'Sukuti Set (Buff)', price: '17 Dhs', itemImg: buffSukutiImg },
-      { name: 'Fish Set', price: '14 Dhs' },
-      { name: 'Paya Set', price: '15 Dhs' },
+      { name: 'Fish Set', price: '14 Dhs', itemImg: fishImg },
+      { name: 'Paya Set', price: '15 Dhs', itemImg: payaImg },
       { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonThakaliImg },
       { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonThakaliImg },
       { name: 'Bhutan Set', price: '17 Dhs' },
@@ -98,7 +132,7 @@ const menuData = [
       { name: 'Local Chicken Dhido Set', price: '18 Dhs' },
       { name: 'Sukuti Dhido Set', price: '17 Dhs' },
       { name: 'Veg Dhido Set', price: '14 Dhs' },
-      { name: 'Paya Dhido Set', price: '15 Dhs' },
+      { name: 'Paya Dhido Set', price: '15 Dhs', itemImg: payaImg },
     ],
   },
   {
@@ -110,6 +144,7 @@ const menuData = [
       { name: 'Fry Momo (Chicken / Buff)', price: '13 Dhs', itemImg: fryMomoImg },
       { name: 'Jhol Momo (Chicken / Buff)', price: '15 Dhs', itemImg: jholMomoImg },
       { name: 'C-Momo (Chicken / Buff)', price: '15 Dhs', itemImg: chiliMomoImg },
+      { name: 'Thukpa Momo (Chicken / Buff)', price: '16 Dhs', itemImg: thukpaMomoImg },
     ],
   },
   {
@@ -125,6 +160,8 @@ const menuData = [
       { name: 'Thukpa (Chicken / Egg)', price: '13 Dhs', itemImg: thukpaImg },
       { name: 'Paya Thukpa', price: '15 Dhs', itemImg: thukpaImg },
       { name: 'Thukpa Mix', price: '15 Dhs', itemImg: thukpaImg },
+      { name: 'Momo & Chowmein Combo', price: '17 Dhs', itemImg: momoChowmeinComboImg },
+      { name: 'Chicken & Mutton Sekuwa Combo', price: '25 Dhs', itemImg: sekuwaComboImg },
     ],
   },
   {
@@ -141,7 +178,7 @@ const menuData = [
     img: eggsImg,
     items: [
       { name: 'Egg Bhujuri (Half / Full)', price: '3/5 Dhs', itemImg: andaBhurjiImg },
-      { name: 'Boiled Egg', price: '1 Dhs' },
+      { name: 'Boiled Egg', price: '1 Dhs', itemImg: andaImg },
       { name: 'Plain Omelette (Half / Full)', price: '2/4 Dhs' },
       { name: 'Masala Omelette (Half / Full)', price: '3/5 Dhs' },
     ],
@@ -154,9 +191,12 @@ const menuData = [
       { name: 'Sukuti Sadeko (S/M/L)', price: '10/18/30 Dhs', itemImg: buffSukutiImg },
       { name: 'Chatpate (Half / Full)', price: '5/10 Dhs', itemImg: chatpateImg },
       { name: 'Bhatmas Sadeko (Half / Full)', price: '5/10 Dhs' },
-      { name: 'Chana Sadeko (Half / Full)', price: '4/8 Dhs' },
+      { name: 'Chana Sadeko (Half / Full)', price: '4/8 Dhs', itemImg: chanaImg },
       { name: 'Waiwai Sadeko', price: '7 Dhs' },
       { name: 'Bhatmas + Waiwai Sadeko', price: '10 Dhs' },
+      { name: 'Special Combo', price: '20 Dhs', itemImg: specialComboImg },
+      { name: 'Special Combo Buff', price: '22 Dhs', itemImg: specialComboBuffImg },
+      { name: 'Jumbo Combo', price: '30 Dhs', itemImg: jumboComboImg },
     ],
   },
   {
@@ -172,7 +212,7 @@ const menuData = [
       { name: 'Rajma Alu (Half/Full)', price: '3/5 Dhs' },
       { name: 'Chana Alu (Half/Full)', price: '3/5 Dhs' },
       { name: 'Saag Green (Half/Full)', price: '3/5 Dhs' },
-      { name: 'Paneer Masala (Half / Full)', price: '6/10 Dhs', itemImg: paneerTikkaImg },
+      { name: 'Paneer Masala (Half / Full)', price: '6/10 Dhs', itemImg: paneerMasalaImg },
       { name: 'Palak Paneer (Half / Full)', price: '6/10 Dhs', itemImg: paneerTikkaImg },
     ],
   },
@@ -180,34 +220,38 @@ const menuData = [
     category: 'Indian Cuisine',
     items: [
       { name: 'Chicken Chilly (Regular / Large)', price: '10/20 Dhs', itemImg: pakuChiliImg },
-      { name: 'Chicken Fry', price: '5/10/15 Dhs' },
-      { name: 'Chicken Masala (Half / Full)', price: '5/10 Dhs' },
+      { name: 'Chicken Fry', price: '5/10/15 Dhs', itemImg: chickenFryImg },
+      { name: 'Chicken Masala (Half / Full)', price: '5/10 Dhs', itemImg: chickenMasalaImg },
       { name: 'Chicken Choila', price: '5/10/15 Dhs', itemImg: chickenChoilaImg },
       { name: 'Dal Makhni', price: '10 Dhs', itemImg: dalMakhniImg },
-      { name: 'Chicken with Jhol', price: '3/5 Dhs' },
-      { name: 'Chicken Lollipop Regular', price: '13 Dhs' },
-      { name: 'Chicken Drumsticks Regular', price: '12 Dhs' },
-      { name: 'Gizzard + Liver', price: '5/10/15 Dhs' },
-      { name: 'Local Chicken', price: '9/15 Dhs' },
-      { name: 'Local Mutton', price: '10/18 Dhs', itemImg: muttonThakaliImg },
+      { name: 'Chicken with Jhol', price: '3/5 Dhs', itemImg: chickenWithJholImg },
+      { name: 'Chicken Lollipop Regular', price: '13 Dhs', itemImg: chickenLollipopImg },
+      { name: 'Chicken Drumsticks Regular', price: '12 Dhs', itemImg: chickenDrumsticksImg },
+      { name: 'Gizzard + Liver', price: '5/10/15 Dhs', itemImg: gizzardLiverImg },
+      { name: 'Local Chicken', price: '9/15 Dhs', itemImg: localChickenImg },
+      { name: 'Local Mutton', price: '10/18 Dhs', itemImg: localMuttonImg },
+      { name: 'Mutton Kadai', price: '20 Dhs', itemImg: muttonKadaiImg },
+      { name: 'Mutton Paku', price: '25 Dhs', itemImg: muttonPakuImg },
+      { name: 'Tandoori Chicken (Half)', price: '15 Dhs', itemImg: tandooriHalfImg },
+      { name: 'Tandoori Chicken (Full)', price: '28 Dhs', itemImg: tandooriFullImg },
       { name: 'Sukuti - Buff', price: '10/18/30 Dhs', itemImg: buffSukutiImg },
-      { name: 'Paya', price: '10/18 Dhs' },
+      { name: 'Paya', price: '10/18 Dhs', itemImg: payaImg },
       { name: 'Bhutan', price: '10/17/30 Dhs' },
-      { name: 'Fish', price: '5/10 Dhs' },
-      { name: 'Sausage', price: '5/10 Dhs' },
+      { name: 'Fish', price: '5/10 Dhs', itemImg: fishImg },
+      { name: 'Sausage', price: '5/10 Dhs', itemImg: sausageImg },
     ],
   },
   {
     category: 'Breakfast',
     items: [
-      { name: 'Chapatti', price: '1 Dhs' },
-      { name: 'Plain Paratha', price: '2 Dhs' },
-      { name: 'Alu Paratha', price: '3 Dhs' },
+      { name: 'Chapatti', price: '1 Dhs', itemImg: chapattiImg },
+      { name: 'Plain Paratha', price: '2 Dhs', itemImg: plainParathaImg },
+      { name: 'Alu Paratha', price: '3 Dhs', itemImg: aluParathaImg },
       { name: 'Puri Tarkari', price: '5 Dhs', itemImg: puriTarkariImg },
-      { name: 'Chana', price: '5 Dhs' },
-      { name: 'Anda', price: '5 Dhs' },
+      { name: 'Chana', price: '5 Dhs', itemImg: chanaImg },
+      { name: 'Anda', price: '5 Dhs', itemImg: andaImg },
       { name: 'Sell Roti + Tarkari', price: '5 Dhs', itemImg: selRotiImg },
-      { name: 'Omelette Paratha', price: '5 Dhs' },
+      { name: 'Omelette Paratha', price: '5 Dhs', itemImg: omeletteParathaImg },
     ],
   },
   {
@@ -230,8 +274,9 @@ const menuData = [
     category: 'SOUP',
     img: soupImg,
     items: [
-      { name: 'Chicken Soup', price: '' },
-      { name: 'Veg Soup', price: '' },
+      { name: 'Chicken Soup', price: '10 Dhs', itemImg: soupDefaultImg },
+      { name: 'Veg Soup', price: '8 Dhs', itemImg: soupDefaultImg },
+      { name: 'Mushroom Soup', price: '12 Dhs', itemImg: mushroomSoupImg },
     ],
   },
   {
