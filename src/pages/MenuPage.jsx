@@ -542,6 +542,7 @@ const MenuPage = () => {
           white-space: nowrap;
           box-shadow: 0 4px 12px rgba(0,0,0,0.06);
           letter-spacing: 0.2px;
+          width: auto;
         }
 
         .menu-pill:hover {
@@ -551,14 +552,14 @@ const MenuPage = () => {
         }
 
         .menu-pill.active {
-          background: var(--primary);
-          color: #ffffff;
+          background: var(--primary) !important;
+          color: #ffffff !important;
           box-shadow: 0 8px 20px rgba(26, 93, 26, 0.25);
           transform: translateY(-1px);
         }
 
         .menu-pill.active .pill-icon {
-          color: #ffffff;
+          color: #ffffff !important;
         }
 
         .pill-icon {
@@ -734,24 +735,42 @@ const MenuPage = () => {
             top: 70px;
             margin-bottom: 30px;
             padding: 5px 0;
+            background: transparent;
           }
 
           .menu-nav-container::after {
-            opacity: 1;
+            display: none;
           }
 
           .menu-categories-pills {
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            justify-content: flex-start;
-            padding: 15px 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-            -webkit-overflow-scrolling: touch;
+            padding: 15px 20px;
+            justify-content: stretch;
+            overflow-x: visible;
           }
 
           .menu-pill {
-            padding: 8px 18px;
-            font-size: 13px;
+            padding: 12px 15px !important;
+            font-size: 12px !important;
+            flex-shrink: 1;
+            white-space: normal;
+            text-align: left;
+            justify-content: flex-start;
+            height: 100%;
+            border-radius: 100px; /* More pill-shaped */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Soft premium shadow */
+          }
+          
+          .menu-pill:last-child:nth-child(odd) {
+            grid-column: span 2;
+            width: auto;
+            justify-self: center;
+            min-width: 160px;
+          }
+
+          .pill-icon {
             flex-shrink: 0;
           }
 
@@ -767,6 +786,7 @@ const MenuPage = () => {
             font-size: 15px;
           }
         }
+
       `}</style>
     </div>
   );
