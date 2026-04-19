@@ -106,6 +106,18 @@ import palakPaneerImg from '../assets/Palak Paneer.jpg';
 import rajmaAluImg from '../assets/Rajma Alu.jpg';
 import vindiAluImg from '../assets/Vindi Alu.jpg';
 import saagGreenImg from '../assets/saag Green.jpg';
+import chowmeinEggImg from '../assets/Chowmein Egg.jpg';
+import chowmeinBuffImg from '../assets/Chowmein Buff.jpg';
+import chowmeinMixImg from '../assets/Chowmein Mix.jpg';
+import waiwaiSadekoImg from '../assets/Waiwai Sadeko.jpg';
+import bhatmasWaiwaiSadekoImg from '../assets/Bhatmas + Waiwai Sadeko.jpg';
+import payaThukpaImg from '../assets/Paya Thukpa.jpg';
+import thukpaChickenEggImg from '../assets/Thukpa (Chicken, Egg).webp';
+import chickenSetNormalImg from '../assets/Chicken Set (Normal).jpg';
+
+import chickenSetLocalImg from '../assets/Chicken Set (Local).jpg';
+import muttonDhidoSetImg from '../assets/Thakali Dhido   Mutton Curry.jpg';
+
 
 
 // ESLint workaround: this project’s ESLint config doesn’t count `<motion.* />` usage.
@@ -118,8 +130,9 @@ const menuData = [
     img: nepaliThaliImg,
     items: [
       { name: 'Veg Set', price: '11 Dhs', itemImg: nepaliThaliImg },
-      { name: 'Chicken Set (Normal)', price: '13 Dhs', itemImg: nepaliThaliImg },
-      { name: 'Chicken Set (Local)', price: '15 Dhs', itemImg: nepaliThaliImg },
+      { name: 'Chicken Set (Normal)', price: '13 Dhs', itemImg: chickenSetNormalImg },
+      { name: 'Chicken Set (Local)', price: '15 Dhs', itemImg: chickenSetLocalImg },
+
       { name: 'Chicken Choila / Fry / Chilly Set', price: '14 Dhs', itemImg: chickenChoilaImg },
       { name: 'Sausage / Liver / Egg Set', price: '13 Dhs', itemImg: sausageImg },
       { name: 'Sukuti Set (Buff)', price: '17 Dhs', itemImg: buffSukutiImg },
@@ -135,10 +148,11 @@ const menuData = [
     category: 'Dhido Set',
     img: dhidoImg,
     items: [
-      { name: 'Mutton Dhido Set', price: '18 Dhs' },
-      { name: 'Mutton Masala Dhido Set', price: '20 Dhs' },
-      { name: 'Chicken Dhido Set', price: '16 Dhs' },
-      { name: 'Local Chicken Dhido Set', price: '18 Dhs' },
+      { name: 'Mutton Dhido Set', price: '18 Dhs', itemImg: muttonDhidoSetImg },
+      { name: 'Mutton Masala Dhido Set', price: '20 Dhs', itemImg: muttonDhidoSetImg },
+      { name: 'Chicken Dhido Set', price: '16 Dhs', itemImg: localChickenImg },
+      { name: 'Local Chicken Dhido Set', price: '18 Dhs', itemImg: localChickenImg },
+
       { name: 'Sukuti Dhido Set', price: '17 Dhs' },
       { name: 'Veg Dhido Set', price: '14 Dhs' },
       { name: 'Paya Dhido Set', price: '15 Dhs', itemImg: payaImg },
@@ -162,13 +176,14 @@ const menuData = [
     items: [
       { name: 'Chowmein Veg', price: '11 Dhs', itemImg: vegChowminImg },
       { name: 'Chowmein Chicken', price: '13 Dhs', itemImg: chickenChowminImg },
-      { name: 'Chowmein Egg', price: '12 Dhs' },
-      { name: 'Chowmein Buff', price: '14 Dhs' },
-      { name: 'Chowmein Mix', price: '15 Dhs' },
+      { name: 'Chowmein Egg', price: '12 Dhs', itemImg: chowmeinEggImg },
+      { name: 'Chowmein Buff', price: '14 Dhs', itemImg: chowmeinBuffImg },
+      { name: 'Chowmein Mix', price: '15 Dhs', itemImg: chowmeinMixImg },
       { name: 'Thukpa Veg', price: '11 Dhs', itemImg: thukpaImg },
-      { name: 'Thukpa (Chicken / Egg)', price: '13 Dhs', itemImg: thukpaImg },
-      { name: 'Paya Thukpa', price: '15 Dhs', itemImg: thukpaImg },
+      { name: 'Thukpa (Chicken / Egg)', price: '13 Dhs', itemImg: thukpaChickenEggImg },
+      { name: 'Paya Thukpa', price: '15 Dhs', itemImg: payaThukpaImg },
       { name: 'Thukpa Mix', price: '15 Dhs', itemImg: thukpaImg },
+
       { name: 'Momo & Chowmein Combo', price: '17 Dhs', itemImg: momoChowmeinComboImg },
       { name: 'Chicken & Mutton Sekuwa Combo', price: '25 Dhs', itemImg: sekuwaComboImg },
     ],
@@ -194,15 +209,19 @@ const menuData = [
   },
   {
     category: 'Special Khata',
+    img: vegetablesImg,
     items: [
+
       { name: 'Laphing', price: '10 Dhs', itemImg: laphingImg },
       { name: 'Panipuri', price: '10 Dhs', itemImg: panipuriImg },
       { name: 'Sukuti Sadeko (S/M/L)', price: '10/18/30 Dhs', itemImg: buffSukutiImg },
       { name: 'Chatpate (Half / Full)', price: '5/10 Dhs', itemImg: chatpateImg },
-      { name: 'Bhatmas Sadeko (Half / Full)', price: '5/10 Dhs' },
+      { name: 'Bhatmas Sadeko (Half / Full)', price: '5/10 Dhs', itemImg: bhatmasWaiwaiSadekoImg },
+
       { name: 'Chana Sadeko (Half / Full)', price: '4/8 Dhs', itemImg: chanaImg },
-      { name: 'Waiwai Sadeko', price: '7 Dhs' },
-      { name: 'Bhatmas + Waiwai Sadeko', price: '10 Dhs' },
+      { name: 'Waiwai Sadeko', price: '7 Dhs', itemImg: waiwaiSadekoImg },
+      { name: 'Bhatmas + Waiwai Sadeko', price: '10 Dhs', itemImg: bhatmasWaiwaiSadekoImg },
+
       { name: 'Special Combo', price: '20 Dhs', itemImg: specialComboImg },
       { name: 'Special Combo Buff', price: '22 Dhs', itemImg: specialComboBuffImg },
       { name: 'Jumbo Combo', price: '30 Dhs', itemImg: jumboComboImg },
