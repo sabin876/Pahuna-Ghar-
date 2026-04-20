@@ -208,7 +208,7 @@ const menuData = [
     ],
   },
   {
-    category: 'Special Khata',
+    category: 'Special Khaja',
     img: vegetablesImg,
     items: [
 
@@ -329,7 +329,7 @@ const categoryIcons = {
   'Sekuwa Set': <Drumstick size={18} />,
   'Taas Set': <Flame size={18} />,
   'Chewra Set': <Wheat size={18} />,
-  'Special Khata': <Sparkles size={18} />,
+  'Special Khaja': <Sparkles size={18} />,
   'Khaja Set': <ChefHat size={18} />,
   'Indian Cuisine': <UtensilsCrossed size={18} />,
   'Breakfast': <Coffee size={18} />,
@@ -732,46 +732,44 @@ const MenuPage = () => {
           }
 
           .menu-nav-container {
-            top: 70px;
+            top: 65px; /* Adjusted to better align with sticky navbar */
             margin-bottom: 30px;
-            padding: 5px 0;
-            background: transparent;
+            padding: 15px 0;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More refined shadow */
+            width: 100%;
+            position: sticky;
+            z-index: 100;
           }
 
           .menu-nav-container::after {
-            display: none;
+            display: none; /* Removed the gradient indicator as scrolling is no longer used */
           }
 
           .menu-categories-pills {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            padding: 15px 20px;
-            justify-content: stretch;
-            overflow-x: visible;
+            display: flex;
+            flex-wrap: wrap; /* Allow pills to wrap into multiple rows */
+            gap: 10px;
+            padding: 0 15px;
+            justify-content: center; /* Center the wrapped items */
           }
 
           .menu-pill {
-            padding: 12px 15px !important;
+            padding: 8px 16px !important;
             font-size: 12px !important;
-            flex-shrink: 1;
-            white-space: normal;
-            text-align: left;
-            justify-content: flex-start;
-            height: 100%;
-            border-radius: 100px; /* More pill-shaped */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Soft premium shadow */
+            flex-shrink: 0;
+            white-space: nowrap;
+            text-align: center;
+            justify-content: center;
+            height: auto;
+            border-radius: 50px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background: #f8f9fa; /* Slightly off-white for better contrast */
           }
           
-          .menu-pill:last-child:nth-child(odd) {
-            grid-column: span 2;
-            width: auto;
-            justify-self: center;
-            min-width: 160px;
-          }
-
           .pill-icon {
             flex-shrink: 0;
+            transform: scale(0.9); /* Scale down icons slightly for mobile */
           }
 
           .dish-info-box {
