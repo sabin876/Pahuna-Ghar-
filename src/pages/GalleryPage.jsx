@@ -12,12 +12,6 @@ const galleryImages = Object.entries(
     import: 'default',
   }),
 )
-  .sort(([pathA], [pathB]) => {
-    const numA = Number((pathA.match(/Gallery(\d+)/i) || [])[1] || 0);
-    const numB = Number((pathB.match(/Gallery(\d+)/i) || [])[1] || 0);
-    return numA - numB;
-  })
-  .slice(0, 8)
   .map(([, image]) => image);
 
 const galleryEase = [0.16, 1, 0.3, 1];
