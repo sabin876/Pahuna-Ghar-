@@ -191,7 +191,7 @@ const menuData = [
     ],
   },
   {
-    category: 'Taas Set',
+    category: 'Newari Khaja/Tass',
     img: newariKhajaImg,
     items: [
       { name: 'Newari Khaja Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs', itemImg: newariKhajaImg },
@@ -200,7 +200,7 @@ const menuData = [
     ],
   },
   {
-    category: 'Chewra Set',
+    category: 'Egg',
     img: eggsImg,
     items: [
       { name: 'Egg Bhujuri (Half / Full)', price: '3/5 Dhs', itemImg: andaBhurjiImg },
@@ -210,24 +210,19 @@ const menuData = [
     ],
   },
   {
-    category: 'Special Khaja',
+    category: 'Sadeko Items',
     img: specialKhajaSetImg,
     items: [
-      { name: 'Laphing', price: '10 Dhs', itemImg: laphingImg, desc: 'Spicy and savory Tibetan cold mung bean noodles with a unique jelly-like texture.' },
-      { name: 'Panipuri', price: '10 Dhs', itemImg: panipuriImg, desc: 'Crispy hollow puris filled with spiced potatoes and tangy tamarind water.' },
       { name: 'Sukuti Sadeko (S/M/L)', price: '10/18/30 Dhs', itemImg: buffSukutiImg, desc: 'Traditional dried meat salad with onions, green chilies, and roasted spices.' },
       { name: 'Chatpate (Half / Full)', price: '5/10 Dhs', itemImg: chatpateImg, desc: 'A popular street snack made with puffed rice, noodles, and a mix of spicy ingredients.' },
       { name: 'Bhatmas Sadeko (Half / Full)', price: '5/10 Dhs', itemImg: bhatmasWaiwaiSadekoImg, desc: 'Crunchy roasted soybeans tossed with ginger, garlic, and fresh citrus.' },
       { name: 'Chana Sadeko (Half / Full)', price: '4/8 Dhs', itemImg: chanaImg, desc: 'Spiced chickpeas salad with fresh herbs and authentic Nepalese seasonings.' },
       { name: 'Waiwai Sadeko', price: '7 Dhs', itemImg: waiwaiSadekoImg, desc: 'The classic Nepalese instant noodle snack, spiced and served dry as a savory salad.' },
       { name: 'Bhatmas + Waiwai Sadeko', price: '10 Dhs', itemImg: bhatmasWaiwaiSadekoImg, desc: 'A powerhouse combination of crunchy soybeans and spiced instant noodles.' },
-      { name: 'Special Combo', price: '20 Dhs', itemImg: specialComboImg, desc: 'A curated selection of our best-selling snacks and appetizers in one platter.' },
-      { name: 'Special Combo Buff', price: '22 Dhs', itemImg: specialComboBuffImg, desc: 'Our signature snack platter featuring premium buffalo meat specialties.' },
-      { name: 'Jumbo Combo', price: '30 Dhs', itemImg: jumboComboImg, desc: 'The ultimate party platter with a wide variety of authentic Himalayan street foods.' },
     ],
   },
   {
-    category: 'Khaja Set',
+    category: 'Vegetables',
     img: vegetablesImg,
     items: [
       { name: 'Karela Alu (Half/Full)', price: '3/5 Dhs' },
@@ -328,10 +323,10 @@ const categoryIcons = {
   'Dhido Set': <Mountain size={18} />,
   'MO:MO': <Star size={18} />,
   'Chowmein/Thukpa': <Drumstick size={18} />,
-  'Taas Set': <Flame size={18} />,
-  'Chewra Set': <Wheat size={18} />,
-  'Special Khaja': <Sparkles size={18} />,
-  'Khaja Set': <ChefHat size={18} />,
+  'Newari Khaja/Tass': <Flame size={18} />,
+  'Egg': <Egg size={18} />,
+  'Sadeko Items': <Sparkles size={18} />,
+  'Vegetables': <Salad size={18} />,
   'Indian Cuisine': <UtensilsCrossed size={18} />,
   'Breakfast': <Coffee size={18} />,
   'Biryani / Fried Rice': <Soup size={18} />,
