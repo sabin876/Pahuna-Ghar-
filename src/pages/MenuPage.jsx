@@ -161,7 +161,7 @@ const menuData = [
     ],
   },
   {
-    category: 'Star Momo Special',
+    category: 'MO:MO',
     img: momoPlatterImg,
     items: [
       { name: 'Steam Momo Chicken', price: '11 Dhs', itemImg: steamMomoImg, desc: 'Tender chicken dumplings steamed to perfection, served with spicy tomato chutney.' },
@@ -173,7 +173,7 @@ const menuData = [
     ],
   },
   {
-    category: 'Sekuwa Set',
+    category: 'Chowmein/Thukpa',
     img: chickenChowminImg,
     items: [
       { name: 'Chowmein Veg', price: '11 Dhs', itemImg: vegChowminImg },
@@ -290,12 +290,12 @@ const menuData = [
       { name: 'Chicken Biryani', price: '15 Dhs', itemImg: chickenBiryaniImg, desc: 'Aromatic layered basmati rice and tender chicken cooked with exotic Himalayan spices.' },
       { name: 'Mutton Biryani', price: '18 Dhs', itemImg: muttonBiryaniImg, desc: 'Fragrant and spicy mutton biryani prepared with premium rice and rich mutton gravy.' },
       { name: 'Veg Biryani', price: '12 Dhs', itemImg: vegBiryaniImg, desc: 'A flavorful vegetarian delight with fresh seasonal vegetables and aromatic basmati rice.' },
-      { name: 'Egg Fried Rice', price: '10 Dhs', itemImg: eggFryRiceImg, desc: 'Wholesome stir-fried rice with fluffy eggs, vegetables, and savory seasonings.' },
-      { name: 'Veg Fried Rice', price: '11 Dhs', itemImg: vegFryRiceImg, desc: 'Freshly tossed fried rice with a variety of seasonal vegetables and light spices.' },
+      { name: 'Egg Fried Rice', price: '12 Dhs', itemImg: eggFryRiceImg, desc: 'Wholesome stir-fried rice with fluffy eggs, vegetables, and savory seasonings.' },
+      { name: 'Veg Fried Rice', price: '10 Dhs', itemImg: vegFryRiceImg, desc: 'Freshly tossed fried rice with a variety of seasonal vegetables and light spices.' },
       { name: 'Chicken Fried Rice', price: '13 Dhs', itemImg: chickenFriedRiceImg, desc: 'Savory stir-fried rice with tender chicken pieces and vibrant vegetables.' },
-      { name: 'Sukuti Fried Rice', price: '13 Dhs', itemImg: fryItemsImg, desc: 'A unique combination of crispy spiced dried meat and flavorful fried rice.' },
-      { name: 'Mix Fried Rice', price: '12 Dhs', itemImg: fryItemsImg, desc: 'The ultimate fried rice ensemble with chicken, egg, and fresh vegetables.' },
-      { name: 'Chicken Triple Rice', price: '14 Dhs', itemImg: fryItemsImg, desc: 'A hearty meal featuring three styles of flavorful rice served with chicken gravy.' },
+      { name: 'Sukuti Fried Rice', price: '14 Dhs', itemImg: fryItemsImg, desc: 'A unique combination of crispy spiced dried meat and flavorful fried rice.' },
+      { name: 'Mix Fried Rice', price: '15 Dhs', itemImg: fryItemsImg, desc: 'The ultimate fried rice ensemble with chicken, egg, and fresh vegetables.' },
+      { name: 'Chicken Triple Rice', price: '16 Dhs', itemImg: fryItemsImg, desc: 'A hearty meal featuring three styles of flavorful rice served with chicken gravy.' },
       { name: 'Plain Rice', price: '3 Dhs', desc: 'Perfectly steamed fluffy long-grain rice, the ideal accompaniment to any curry.' },
     ],
   },
@@ -326,8 +326,8 @@ const menuData = [
 const categoryIcons = {
   'Thakali Set': <Utensils size={18} />,
   'Dhido Set': <Mountain size={18} />,
-  'Star Momo Special': <Star size={18} />,
-  'Sekuwa Set': <Drumstick size={18} />,
+  'MO:MO': <Star size={18} />,
+  'Chowmein/Thukpa': <Drumstick size={18} />,
   'Taas Set': <Flame size={18} />,
   'Chewra Set': <Wheat size={18} />,
   'Special Khaja': <Sparkles size={18} />,
