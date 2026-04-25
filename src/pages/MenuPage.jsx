@@ -44,9 +44,6 @@ import boomBoomImg from '../assets/Boom Boom.jpg';
 import lassiImg from '../assets/Banana Lasi.jpg';
 
 // Newly added menu images
-import chickenBiryaniImg from '../assets/chicken biryani.jpg';
-import muttonBiryaniImg from '../assets/mutton biryani.jpg';
-import vegBiryaniImg from '../assets/veg biryani .jpg';
 import eggFryRiceImg from '../assets/egg fry rice.jpg';
 import vegFryRiceImg from '../assets/veg fry rice.jpg';
 import chickenFriedRiceImg from '../assets/chicken fry rice .jpg';
@@ -109,18 +106,35 @@ import saagGreenImg from '../assets/saag Green.jpg';
 import chowmeinEggImg from '../assets/Chowmein Egg.jpg';
 import chowmeinBuffImg from '../assets/Chowmein Buff.jpg';
 import chowmeinMixImg from '../assets/Chowmein Mix.jpg';
+import chowmeinChickenImg from '../assets/Chowmein Chicken.jpg';
 import waiwaiSadekoImg from '../assets/Waiwai Sadeko.jpg';
 import bhatmasWaiwaiSadekoImg from '../assets/Bhatmas + Waiwai Sadeko.jpg';
 import payaThukpaImg from '../assets/Paya Thukpa.jpg';
 import thukpaChickenEggImg from '../assets/Thukpa (Chicken, Egg).webp';
 import chickenSetNormalImg from '../assets/Chicken Set (Normal).jpg';
-
 import chickenSetLocalImg from '../assets/Chicken Set (Local).jpg';
 import muttonDhidoSetImg from '../assets/Thakali Dhido   Mutton Curry.jpg';
 import bhutanSetImg from '../assets/Bhutan Set.png';
 import chanaAndaImg from '../assets/chana anda.png';
 import rollImg from '../assets/roll.png';
 import teelJholMomoImg from '../assets/teel jhol momo.jpg';
+import chickenTripleRiceImg from '../assets/Chicken Triple Rice.jpg';
+import sukutiFriedRiceImg from '../assets/Sukuti Fried Rice.jpg';
+import mixedFriedRiceImg from '../assets/Mixed Fried Rice.jpg';
+import muttonMasalaSetImg from '../assets/Mutton Masala Set.jpg';
+import thakaliSetImg from '../assets/Thakali Set veg chicken buff Mutton.jpg';
+import thakaliDhidoVegImg from '../assets/Thakali Dhido  Veg.jpg';
+import comboSetImg from '../assets/Combo Set.jpg';
+import muttonRiceComboImg from '../assets/mutton_rice_combo.png';
+import riceImg from '../assets/Rice.jpg';
+import muttonImg from '../assets/Mutton.jpg';
+import payaImgAsset from '../assets/Paya.jpg';
+import vegetablesJpg from '../assets/Vegetables.jpg';
+import normalChickenJpg from '../assets/Normal Chicken.jpg';
+import localChickenJpg from '../assets/Local.jpg';
+import dhidoWebp from '../assets/Dhido.webp';
+import localChickenDhidoSetJpg from '../assets/Local Chicken Dhido Set.jpg';
+import vegSoupWebp from '../assets/Veg Soup.webp';
 
 
 
@@ -142,9 +156,9 @@ const menuData = [
       { name: 'Fish Set', price: '14 Dhs', itemImg: fishImg, desc: 'Traditional river fish curry prepared with a unique blend of coastal and mountain spices.' },
       { name: 'Paya Set', price: '15 Dhs', itemImg: payaImg, desc: 'Slow-cooked trotter soup rich in collagen and flavor, served with steamed rice.' },
       { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonThakaliImg, desc: 'Tender mutton cooked in a rich, aromatic gravy, served with a traditional Thakali set.' },
-      { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonThakaliImg, desc: 'A premium mutton dish cooked with extra spices for a bold and spicy flavor profile.' },
+      { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonMasalaSetImg, desc: 'A premium mutton dish cooked with extra spices for a bold and spicy flavor profile.' },
       { name: 'Bhutan Set', price: '17 Dhs', itemImg: bhutanSetImg, desc: 'A traditional spicy offal dish prepared with Himalayan herbs and spices.' },
-      { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs', itemImg: nepaliThaliImg, desc: 'The signature Pahuna Ghar multi-course platter with your choice of protein.' },
+      { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs', itemImg: thakaliSetImg, desc: 'The signature Pahuna Ghar multi-course platter with your choice of protein.' },
     ],
   },
   {
@@ -152,12 +166,12 @@ const menuData = [
     img: dhidoImg,
     items: [
       { name: 'Mutton Dhido Set', price: '18 Dhs', itemImg: muttonDhidoSetImg, desc: 'Stone-ground buckwheat porridge served with rich mutton curry and traditional sides.' },
-      { name: 'Mutton Masala Dhido Set', price: '20 Dhs', itemImg: muttonDhidoSetImg, desc: 'Spiced mutton masala served with healthy and nutritious Nepalese dhido.' },
-      { name: 'Chicken Dhido Set', price: '16 Dhs', itemImg: localChickenImg, desc: 'Classic chicken curry paired with traditional steamed buckwheat or millet porridge.' },
-      { name: 'Local Chicken Dhido Set', price: '18 Dhs', itemImg: localChickenImg, desc: 'Authentic local chicken flavor served with the traditional Himalayan staple, dhido.' },
-      { name: 'Sukuti Dhido Set', price: '17 Dhs', itemImg: buffSukutiImg, desc: 'A savory combination of dried spiced meat and nutritious stone-ground porridge.' },
-      { name: 'Veg Dhido Set', price: '14 Dhs', itemImg: dhidoImg, desc: 'A healthy and simple vegetarian version of the traditional Nepalese dhido set.' },
-      { name: 'Paya Dhido Set', price: '15 Dhs', itemImg: payaImg, desc: 'Rich and flavorful trotter soup served with fresh, warm Nepalese dhido.' },
+      { name: 'Mutton Masala Dhido Set', price: '20 Dhs', itemImg: muttonMasalaSetImg, sideImg: dhidoWebp, desc: 'Spiced mutton masala served with healthy and nutritious Nepalese dhido.' },
+      { name: 'Chicken Dhido Set', price: '16 Dhs', itemImg: chickenSetNormalImg, desc: 'Classic chicken curry paired with traditional steamed buckwheat or millet porridge.' },
+      { name: 'Local Chicken Dhido Set', price: '18 Dhs', itemImg: localChickenDhidoSetJpg, desc: 'Authentic local chicken flavor served with the traditional Himalayan staple, dhido.' },
+      { name: 'Sukuti Dhido Set', price: '17 Dhs', itemImg: buffSukutiImg, sideImg: dhidoWebp, desc: 'A savory combination of dried spiced meat and nutritious stone-ground porridge.' },
+      { name: 'Veg Dhido Set', price: '14 Dhs', itemImg: thakaliDhidoVegImg, desc: 'A healthy and simple vegetarian version of the traditional Nepalese dhido set.' },
+      { name: 'Paya Dhido Set', price: '15 Dhs', itemImg: payaImgAsset, sideImg: dhidoWebp, desc: 'Rich and flavorful trotter soup served with fresh, warm Nepalese dhido.' },
     ],
   },
   {
@@ -169,25 +183,21 @@ const menuData = [
       { name: 'Fry Momo (Chicken / Buff)', price: '13 Dhs', itemImg: fryMomoImg, desc: 'Golden-fried dumplings with a crispy exterior and a juicy meat filling.' },
       { name: 'Jhol Momo (Chicken / Buff)', price: '15 Dhs', itemImg: teelJholMomoImg, desc: 'Steam-cooked dumplings served in a rich, spicy, and tangy sesame-based soup.' },
       { name: 'C-Momo (Chicken / Buff)', price: '15 Dhs', itemImg: chiliMomoImg, desc: 'Wok-tossed dumplings in a spicy chili sauce with onions, peppers, and green chilies.' },
-      { name: 'Thukpa Momo (Chicken / Buff)', price: '16 Dhs', itemImg: thukpaMomoImg, desc: 'A comforting combination of meat dumplings and noodle soup with Himalayan herbs.' },
     ],
   },
   {
     category: 'Chowmein/Thukpa',
     img: chickenChowminImg,
     items: [
-      { name: 'Chowmein Veg', price: '11 Dhs', itemImg: vegChowminImg },
-      { name: 'Chowmein Chicken', price: '13 Dhs', itemImg: chickenChowminImg },
-      { name: 'Chowmein Egg', price: '12 Dhs', itemImg: chowmeinEggImg },
-      { name: 'Chowmein Buff', price: '14 Dhs', itemImg: chowmeinBuffImg },
-      { name: 'Chowmein Mix', price: '15 Dhs', itemImg: chowmeinMixImg },
-      { name: 'Thukpa Veg', price: '11 Dhs', itemImg: thukpaImg },
-      { name: 'Thukpa (Chicken / Egg)', price: '13 Dhs', itemImg: thukpaChickenEggImg },
-      { name: 'Paya Thukpa', price: '15 Dhs', itemImg: payaThukpaImg },
-      { name: 'Thukpa Mix', price: '15 Dhs', itemImg: thukpaImg },
-
-      { name: 'Momo & Chowmein Combo', price: '17 Dhs', itemImg: momoChowmeinComboImg },
-      { name: 'Chicken & Mutton Sekuwa Combo', price: '25 Dhs', itemImg: sekuwaComboImg },
+      { name: 'Chowmein Veg', price: '10 Dhs', itemImg: vegChowminImg },
+      { name: 'Chowmein Chicken', price: '10 Dhs', itemImg: chowmeinChickenImg },
+      { name: 'Chowmein Egg', price: '10 Dhs', itemImg: chowmeinEggImg },
+      { name: 'Chowmein Buff', price: '13 Dhs', itemImg: chowmeinBuffImg },
+      { name: 'Chowmein Mix', price: '14 Dhs', itemImg: chowmeinMixImg },
+      { name: 'Thukpa Veg', price: '10 Dhs', itemImg: thukpaImg },
+      { name: 'Thukpa (Chicken / Egg)', price: '12 Dhs', itemImg: thukpaChickenEggImg },
+      { name: 'Paya Thukpa', price: '13 Dhs', itemImg: payaThukpaImg },
+      { name: 'Thukpa Mix', price: '14 Dhs', itemImg: thukpaImg },
     ],
   },
   {
@@ -196,7 +206,7 @@ const menuData = [
     items: [
       { name: 'Newari Khaja Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs', itemImg: newariKhajaImg },
       { name: 'Tass Set (Chi/Buff/Mutt)', price: '16/18/20 Dhs', itemImg: newariKhajaImg },
-      { name: 'Combo Set (Chi/Buff/Mutton/Bhutan)', price: '20/25/25/25 Dhs', itemImg: newariKhajaImg },
+      { name: 'Combo Set (Chi/Buff/Mutton/Bhutan)', price: '20/25/25/25 Dhs', itemImg: comboSetImg },
     ],
   },
   {
@@ -239,7 +249,7 @@ const menuData = [
     ],
   },
   {
-    category: 'Indian Cuisine',
+    category: 'Non-Veg items',
     items: [
       { name: 'Chicken Chilly (Regular / Large)', price: '10/20 Dhs', itemImg: pakuChiliImg, desc: 'Wok-tossed chicken chunks in a spicy and savory chili glaze.' },
       { name: 'Chicken Fry', price: '5/10/15 Dhs', itemImg: chickenFryImg, desc: 'Crispy and marinated fried chicken pieces with traditional seasoning.' },
@@ -279,28 +289,32 @@ const menuData = [
     ],
   },
   {
-    category: 'Biryani / Fried Rice',
+    category: 'Plain Rice+ Items/Fry Items',
     img: fryItemsImg,
     items: [
-      { name: 'Chicken Biryani', price: '15 Dhs', itemImg: chickenBiryaniImg, desc: 'Aromatic layered basmati rice and tender chicken cooked with exotic Himalayan spices.' },
-      { name: 'Mutton Biryani', price: '18 Dhs', itemImg: muttonBiryaniImg, desc: 'Fragrant and spicy mutton biryani prepared with premium rice and rich mutton gravy.' },
-      { name: 'Veg Biryani', price: '12 Dhs', itemImg: vegBiryaniImg, desc: 'A flavorful vegetarian delight with fresh seasonal vegetables and aromatic basmati rice.' },
       { name: 'Egg Fried Rice', price: '12 Dhs', itemImg: eggFryRiceImg, desc: 'Wholesome stir-fried rice with fluffy eggs, vegetables, and savory seasonings.' },
       { name: 'Veg Fried Rice', price: '10 Dhs', itemImg: vegFryRiceImg, desc: 'Freshly tossed fried rice with a variety of seasonal vegetables and light spices.' },
       { name: 'Chicken Fried Rice', price: '13 Dhs', itemImg: chickenFriedRiceImg, desc: 'Savory stir-fried rice with tender chicken pieces and vibrant vegetables.' },
-      { name: 'Sukuti Fried Rice', price: '14 Dhs', itemImg: fryItemsImg, desc: 'A unique combination of crispy spiced dried meat and flavorful fried rice.' },
-      { name: 'Mix Fried Rice', price: '15 Dhs', itemImg: fryItemsImg, desc: 'The ultimate fried rice ensemble with chicken, egg, and fresh vegetables.' },
-      { name: 'Chicken Triple Rice', price: '16 Dhs', itemImg: fryItemsImg, desc: 'A hearty meal featuring three styles of flavorful rice served with chicken gravy.' },
-      { name: 'Plain Rice', price: '3 Dhs', desc: 'Perfectly steamed fluffy long-grain rice, the ideal accompaniment to any curry.' },
+      { name: 'Sukuti Fried Rice', price: '14 Dhs', itemImg: sukutiFriedRiceImg, desc: 'A unique combination of crispy spiced dried meat and flavorful fried rice.' },
+      { name: 'Mix Fried Rice', price: '15 Dhs', itemImg: mixedFriedRiceImg, desc: 'The ultimate fried rice ensemble with chicken, egg, and fresh vegetables.' },
+      { name: 'Chicken Triple Rice', price: '16 Dhs', itemImg: chickenTripleRiceImg, desc: 'A hearty meal featuring three styles of flavorful rice served with chicken gravy.' },
+      { name: 'DAL(Black +Yellow)', price: '2 Dhs', itemImg: dalMakhniImg, desc: 'Traditional slow-cooked lentils, a mix of black and yellow varieties.' },
+      { name: 'Rice +Vegetables', price: '6 Dhs', itemImg: vegetablesJpg, sideImg: riceImg, desc: 'Steamed rice served with a variety of seasonal vegetable curry.' },
+      { name: 'Rice+Veg+ Dal', price: '8 Dhs', itemImg: nepaliThaliImg, desc: 'A complete vegetarian meal with rice, vegetables, and lentils.' },
+      { name: 'Normal Chicken +Rice', price: '10 Dhs', itemImg: normalChickenJpg, desc: 'Traditional chicken curry served with a side of fluffy steamed rice.' },
+      { name: 'Local Chicken + Rice', price: '12 Dhs', itemImg: localChickenJpg, desc: 'Flavorful local chicken curry paired with a side of steamed rice.' },
+      { name: 'Fish+ Rice', price: '10 Dhs', itemImg: fishImg, sideImg: riceImg, desc: 'Fried or curried fish served with a side of steamed rice.' },
+      { name: 'Paya +Rice', price: '12 Dhs', itemImg: payaImgAsset, sideImg: riceImg, desc: 'Rich trotter soup (Paya) served with a side of steamed rice.' },
+      { name: 'Mutton +Rice', price: '13 Dhs', itemImg: muttonImg, sideImg: riceImg, desc: 'Tender mutton curry served with a generous portion of steamed rice.' },
+      { name: 'Plain Rice', price: '3 Dhs', itemImg: riceImg, desc: 'Perfectly steamed fluffy long-grain rice, the ideal accompaniment to any curry.' },
     ],
   },
   {
     category: 'SOUP',
     img: soupImg,
     items: [
-      { name: 'Chicken Soup', price: '10 Dhs', itemImg: soupDefaultImg, desc: 'Hearty and clear chicken broth with tender pieces and mountain herbs.' },
-      { name: 'Veg Soup', price: '8 Dhs', itemImg: soupDefaultImg, desc: 'A light and healthy soup made with a medley of fresh seasonal vegetables.' },
-      { name: 'Mushroom Soup', price: '12 Dhs', itemImg: mushroomSoupImg, desc: 'Creamy and earthy soup featuring fresh mushrooms and aromatic seasonings.' },
+      { name: 'Chicken Soup', price: '8 Dhs', itemImg: soupDefaultImg, desc: 'Hearty and clear chicken broth with tender pieces and mountain herbs.' },
+      { name: 'Veg Soup', price: '8 Dhs', itemImg: vegSoupWebp, desc: 'A light and healthy soup made with a medley of fresh seasonal vegetables.' },
     ],
   },
   {
@@ -327,9 +341,9 @@ const categoryIcons = {
   'Egg': <Egg size={18} />,
   'Sadeko Items': <Sparkles size={18} />,
   'Vegetables': <Salad size={18} />,
-  'Indian Cuisine': <UtensilsCrossed size={18} />,
+  'Non-Veg items': <UtensilsCrossed size={18} />,
   'Breakfast': <Coffee size={18} />,
-  'Biryani / Fried Rice': <Soup size={18} />,
+  'Plain Rice+ Items/Fry Items': <Soup size={18} />,
   'SOUP': <Soup size={18} />,
   'Drinks': <GlassWater size={18} />,
 };
@@ -394,8 +408,11 @@ const MenuPage = () => {
                 className="dish-card-premium"
                 whileHover={{ y: -5 }}
               >
-                <div className="dish-image-box">
-                  <img src={item.itemImg || currentCategoryBg} alt={item.name} className="dish-img" />
+                <div className={`dish-image-box ${item.sideImg ? 'dual-images' : ''}`}>
+                  <img src={item.itemImg || currentCategoryBg} alt={item.name} className="dish-img main-img" />
+                  {item.sideImg && (
+                    <img src={item.sideImg} alt="Side dish" className="dish-img side-img" />
+                  )}
                 </div>
                 <div className="dish-info-box">
                   <div className="dish-header">
@@ -589,6 +606,13 @@ const MenuPage = () => {
           min-width: 140px;
           height: auto;
           overflow: hidden;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .dish-image-box.dual-images {
+          gap: 2px;
         }
 
         .dish-img {
@@ -596,6 +620,10 @@ const MenuPage = () => {
           height: 100%;
           object-fit: cover;
           transition: transform 0.6s ease;
+        }
+
+        .dish-image-box.dual-images .dish-img {
+          height: 50%;
         }
 
         .dish-card-premium:hover .dish-img {
