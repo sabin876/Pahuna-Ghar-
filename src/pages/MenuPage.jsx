@@ -609,6 +609,7 @@ const MenuPage = () => {
           position: relative;
           display: flex;
           flex-direction: column;
+          background: rgba(255, 255, 255, 0.03);
         }
 
         .dish-image-box.dual-images {
@@ -619,7 +620,7 @@ const MenuPage = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.6s ease;
+          transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .dish-image-box.dual-images .dish-img {
@@ -627,7 +628,7 @@ const MenuPage = () => {
         }
 
         .dish-card-premium:hover .dish-img {
-          transform: scale(1.1);
+          transform: scale(1.12);
         }
 
         .dish-info-box {
@@ -732,82 +733,85 @@ const MenuPage = () => {
 
         @media (max-width: 768px) {
           .menu-header-container {
-            padding: 40px 0 20px;
+            padding: 60px 0 20px;
           }
 
           .menu-title-premium {
-            font-size: clamp(28px, 8vw, 36px);
+            font-size: clamp(32px, 10vw, 42px);
             margin-bottom: 12px;
-            padding: 0 15px;
-            line-height: 1.2;
+            padding: 0 20px;
+            text-align: left;
           }
 
-          .menu-items-grid-v2 {
-            grid-template-columns: 1fr;
-            gap: 20px;
-            padding: 0 10px 60px;
+          .menu-nav-container {
+            position: sticky;
+            top: 70px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            margin: 0 -20px 30px;
+            width: calc(100% + 40px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+          }
+
+          .menu-categories-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0 15px;
+            justify-content: center;
+          }
+
+          .menu-pill {
+            padding: 8px 14px !important;
+            font-size: 11px !important;
+            border-radius: 50px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+            flex-shrink: 0;
           }
 
           .dish-card-premium {
             flex-direction: column;
+            border-radius: 20px;
+            margin: 0 10px;
           }
 
           .dish-image-box {
             width: 100%;
             height: 220px;
+            min-width: 100%;
           }
 
-          .menu-nav-container {
-            top: 65px; /* Adjusted to better align with sticky navbar */
-            margin-bottom: 30px;
-            padding: 15px 0;
-            background: #ffffff;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* More refined shadow */
-            width: 100%;
-            position: sticky;
-            z-index: 100;
-          }
-
-          .menu-nav-container::after {
-            display: none; /* Removed the gradient indicator as scrolling is no longer used */
-          }
-
-          .menu-categories-pills {
-            display: flex;
-            flex-wrap: wrap; /* Allow pills to wrap into multiple rows */
-            gap: 10px;
-            padding: 0 15px;
-            justify-content: center; /* Center the wrapped items */
-          }
-
-          .menu-pill {
-            padding: 8px 16px !important;
-            font-size: 12px !important;
-            flex-shrink: 0;
-            white-space: nowrap;
-            text-align: center;
-            justify-content: center;
-            height: auto;
-            border-radius: 50px; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            background: #f8f9fa; /* Slightly off-white for better contrast */
-          }
-          
-          .pill-icon {
-            flex-shrink: 0;
-            transform: scale(0.9); /* Scale down icons slightly for mobile */
+          .dish-image-box.dual-images {
+            flex-direction: row;
+            height: 200px;
           }
 
           .dish-info-box {
-            padding: 16px;
+            padding: 24px 20px;
           }
 
           .dish-name {
-            font-size: 17px;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
           }
 
           .dish-price {
-            font-size: 15px;
+            font-size: 1rem;
+          }
+
+          .dish-desc {
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+          }
+
+          .menu-items-grid-v2 {
+            padding: 0 10px 40px;
+            gap: 24px;
           }
         }
 
