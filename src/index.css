@@ -304,7 +304,11 @@ ul {
   }
   
   .nav-logo .logo-img {
-    height: 100px !important;
+    height: 80px !important;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }
 

@@ -733,85 +733,85 @@ const MenuPage = () => {
 
         @media (max-width: 768px) {
           .menu-header-container {
-            padding: 60px 0 20px;
+            padding: 40px 0 10px;
           }
 
           .menu-title-premium {
-            font-size: clamp(32px, 10vw, 42px);
-            margin-bottom: 12px;
-            padding: 0 20px;
-            text-align: left;
+            font-size: clamp(28px, 9vw, 40px);
+            margin-bottom: 15px;
+            padding: 0 15px;
+            text-align: center;
           }
 
           .menu-nav-container {
             position: sticky;
-            top: 70px;
+            top: 60px;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
             padding: 15px 0;
-            margin: 0 -20px 30px;
-            width: calc(100% + 40px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+            width: 100%;
           }
 
           .menu-categories-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            padding: 0 15px;
+            gap: 10px;
+            padding: 0 10px;
             justify-content: center;
           }
 
           .menu-pill {
-            padding: 8px 14px !important;
+            padding: 8px 15px !important;
             font-size: 11px !important;
             border-radius: 50px;
             background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.02);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.03);
             flex-shrink: 0;
           }
 
           .dish-card-premium {
             flex-direction: column;
             border-radius: 20px;
-            margin: 0 10px;
+            margin-bottom: 5px;
           }
 
           .dish-image-box {
             width: 100%;
-            height: 220px;
+            height: 200px;
             min-width: 100%;
           }
 
           .dish-image-box.dual-images {
             flex-direction: row;
-            height: 200px;
+            height: 180px;
           }
 
           .dish-info-box {
-            padding: 24px 20px;
+            padding: 20px;
           }
 
           .dish-name {
-            font-size: 1.2rem;
-            margin-bottom: 6px;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
           }
 
           .dish-price {
-            font-size: 1rem;
+            font-size: 0.95rem;
           }
 
           .dish-desc {
-            font-size: 0.95rem;
-            margin-bottom: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
           }
 
           .menu-items-grid-v2 {
-            padding: 0 10px 40px;
-            gap: 24px;
+            padding: 0 15px 40px;
+            gap: 20px;
           }
         }
 
