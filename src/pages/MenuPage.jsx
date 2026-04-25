@@ -145,7 +145,7 @@ void motion;
 // Authentic realistic placeholder images mapped to each item
 const menuData = [
   {
-    category: 'Thakali Set',
+    category: 'Nepali Thali Set',
     img: nepaliThaliImg,
     items: [
       { name: 'Veg Set', price: '11 Dhs', itemImg: nepaliThaliImg, desc: 'A healthy assortment of lentils, spinach, vegetable curry, and pickles served with steamed rice.' },
@@ -156,10 +156,10 @@ const menuData = [
       { name: 'Sukuti Set (Buff)', price: '17 Dhs', itemImg: buffSukutiImg, sideImg: vegJpg, desc: 'Dried and spiced buffalo meat sauteed to perfection, served with a full rice set.' },
       { name: 'Fish Set', price: '14 Dhs', itemImg: fishImg, sideImg: vegJpg, desc: 'Traditional river fish curry prepared with a unique blend of coastal and mountain spices.' },
       { name: 'Paya Set', price: '15 Dhs', itemImg: payaImg, sideImg: vegJpg, desc: 'Slow-cooked trotter soup rich in collagen and flavor, served with steamed rice.' },
-      { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonThakaliImg, desc: 'Tender mutton cooked in a rich, aromatic gravy, served with a traditional Thakali set.' },
+      { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonThakaliImg, desc: 'Tender mutton cooked in a rich, aromatic gravy, served with a traditional Nepali Thali set.' },
       { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonMasalaSetImg, sideImg: vegJpg, desc: 'A premium mutton dish cooked with extra spices for a bold and spicy flavor profile.' },
       { name: 'Bhutan Set', price: '17 Dhs', itemImg: bhutanSetImg, sideImg: vegJpg, desc: 'A traditional spicy offal dish prepared with Himalayan herbs and spices.' },
-      { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs', itemImg: thakaliSetImg, desc: 'The signature Pahuna Ghar multi-course platter with your choice of protein.' },
+      { name: 'Nepali Thali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs', itemImg: thakaliSetImg, desc: 'The signature Pahuna Ghar multi-course platter with your choice of protein.' },
     ],
   },
   {
@@ -334,7 +334,7 @@ const menuData = [
 ];
 
 const categoryIcons = {
-  'Thakali Set': <Utensils size={18} />,
+  'Nepali Thali Set': <Utensils size={18} />,
   'Dhido Set': <Mountain size={18} />,
   'MO:MO': <Star size={18} />,
   'Chowmein/Thukpa': <Drumstick size={18} />,

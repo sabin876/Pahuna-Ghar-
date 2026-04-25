@@ -363,7 +363,7 @@ function App() {
                   <span style={{ color: '#ffffff' }}>pahuna</span>
                   <span className="highlight">GHAR</span>
                   <div className="history-brand-divider"></div>
-                  <span className="highlight">THAKALI</span>
+                  <span className="highlight">NEPALI THALI</span>
                 </h2>
                 <div className="history-subtitle">
                   AUTHENTIC NEPALI CUISINE & BAR
@@ -379,7 +379,7 @@ function App() {
                   transition={{ delay: 0.2 }}
                   style={{ marginBottom: '24px' }}
                 >
-                  Welcome to Pahuna Ghar, where you can taste every flavor. Finding the best Thakali Khana set in Dubai is made easy with Pahuna Ghar. 
+                  Welcome to Pahuna Ghar, where you can taste every flavor. Finding the best Nepali Thali set in Dubai is made easy with Pahuna Ghar. 
                 </motion.p>
 
                 <motion.p 
@@ -398,7 +398,7 @@ function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  Our food is about connecting you to Nepal's rich heritage. Our thakali khana set is the perfect harmony of flavor and texture, satisfied your cravings and making you feel as if you are in the heart of the mountains.
+                  Our food is about connecting you to Nepal's rich heritage. Our Nepali Thali set is the perfect harmony of flavor and texture, satisfying your cravings and making you feel as if you are in the heart of the mountains.
                 </motion.p>
 
 
