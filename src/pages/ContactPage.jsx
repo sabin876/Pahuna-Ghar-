@@ -224,24 +224,6 @@ function ContactPage() {
                   >
                     <Facebook />
                   </motion.a>
-                  <motion.a 
-                    href="https://instagram.com/starmomouae" 
-                    target="_blank"
-                    className="social-btn-premium"
-                    whileHover={{ scale: 1.15, rotate: -12, background: 'var(--secondary)', color: 'var(--primary)' }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <Instagram />
-                  </motion.a>
-                  <motion.a 
-                    href="https://tiktok.com/@starmomouae" 
-                    target="_blank"
-                    className="social-btn-premium"
-                    whileHover={{ scale: 1.15, rotate: 12, background: 'var(--secondary)', color: 'var(--primary)' }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <TikTokIcon size={24} />
-                  </motion.a>
                 </div>
               </motion.div>
             </div>

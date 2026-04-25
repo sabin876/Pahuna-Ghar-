@@ -429,7 +429,6 @@ function App() {
               <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.8' }}>Authentic taste of Nepal in Dubai. Experience the true essence of Himalayan flavors with every bite.</p>
               <div className="social-links">
                 <motion.a href="https://www.facebook.com/profile.php?id=100077641522086" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Facebook size={20} /></motion.a>
-                <motion.a href="https://instagram.com/starmomouae" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><Instagram size={20} /></motion.a>
                 <motion.a href="https://wa.me/971555429243" target="_blank" className="social-icon" whileHover={{ y: -6, scale: 1.08 }} whileTap={{ scale: 0.95 }}><MessageCircle size={20} /></motion.a>
               </div>
             </motion.div>
