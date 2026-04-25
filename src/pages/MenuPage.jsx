@@ -135,6 +135,7 @@ import localChickenJpg from '../assets/Local.jpg';
 import dhidoWebp from '../assets/Dhido.webp';
 import localChickenDhidoSetJpg from '../assets/Local Chicken Dhido Set.jpg';
 import vegSoupWebp from '../assets/Veg Soup.webp';
+import vegJpg from '../assets/Veg.jpg';
 
 
 
@@ -150,14 +151,14 @@ const menuData = [
       { name: 'Veg Set', price: '11 Dhs', itemImg: nepaliThaliImg, desc: 'A healthy assortment of lentils, spinach, vegetable curry, and pickles served with steamed rice.' },
       { name: 'Chicken Set (Normal)', price: '13 Dhs', itemImg: chickenSetNormalImg, desc: 'Authentic Nepalese chicken curry served with dal, rice, and traditional side dishes.' },
       { name: 'Chicken Set (Local)', price: '15 Dhs', itemImg: chickenSetLocalImg, desc: 'Flavorful local chicken prepared with traditional mountain spices for an authentic taste.' },
-      { name: 'Chicken Choila / Fry / Chilly Set', price: '14 Dhs', itemImg: chickenChoilaImg, desc: 'Your choice of spicy grilled or fried chicken served in a complete thali set.' },
-      { name: 'Sausage / Liver / Egg Set', price: '13 Dhs', itemImg: sausageImg, desc: 'A protein-rich set featuring savory sausages, liver, or eggs cooked in Nepalese style.' },
-      { name: 'Sukuti Set (Buff)', price: '17 Dhs', itemImg: buffSukutiImg, desc: 'Dried and spiced buffalo meat sauteed to perfection, served with a full rice set.' },
-      { name: 'Fish Set', price: '14 Dhs', itemImg: fishImg, desc: 'Traditional river fish curry prepared with a unique blend of coastal and mountain spices.' },
-      { name: 'Paya Set', price: '15 Dhs', itemImg: payaImg, desc: 'Slow-cooked trotter soup rich in collagen and flavor, served with steamed rice.' },
+      { name: 'Chicken Choila / Fry / Chilly Set', price: '14 Dhs', itemImg: chickenChoilaImg, sideImg: vegJpg, desc: 'Your choice of spicy grilled or fried chicken served in a complete thali set.' },
+      { name: 'Sausage / Liver / Egg Set', price: '13 Dhs', itemImg: sausageImg, sideImg: vegJpg, desc: 'A protein-rich set featuring savory sausages, liver, or eggs cooked in Nepalese style.' },
+      { name: 'Sukuti Set (Buff)', price: '17 Dhs', itemImg: buffSukutiImg, sideImg: vegJpg, desc: 'Dried and spiced buffalo meat sauteed to perfection, served with a full rice set.' },
+      { name: 'Fish Set', price: '14 Dhs', itemImg: fishImg, sideImg: vegJpg, desc: 'Traditional river fish curry prepared with a unique blend of coastal and mountain spices.' },
+      { name: 'Paya Set', price: '15 Dhs', itemImg: payaImg, sideImg: vegJpg, desc: 'Slow-cooked trotter soup rich in collagen and flavor, served with steamed rice.' },
       { name: 'Mutton Set', price: '18 Dhs', itemImg: muttonThakaliImg, desc: 'Tender mutton cooked in a rich, aromatic gravy, served with a traditional Thakali set.' },
-      { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonMasalaSetImg, desc: 'A premium mutton dish cooked with extra spices for a bold and spicy flavor profile.' },
-      { name: 'Bhutan Set', price: '17 Dhs', itemImg: bhutanSetImg, desc: 'A traditional spicy offal dish prepared with Himalayan herbs and spices.' },
+      { name: 'Mutton Masala Set', price: '20 Dhs', itemImg: muttonMasalaSetImg, sideImg: vegJpg, desc: 'A premium mutton dish cooked with extra spices for a bold and spicy flavor profile.' },
+      { name: 'Bhutan Set', price: '17 Dhs', itemImg: bhutanSetImg, sideImg: vegJpg, desc: 'A traditional spicy offal dish prepared with Himalayan herbs and spices.' },
       { name: 'Thakali Set (Veg/Chicken/Buff/Mutton)', price: '14/16/20/20 Dhs', itemImg: thakaliSetImg, desc: 'The signature Pahuna Ghar multi-course platter with your choice of protein.' },
     ],
   },
