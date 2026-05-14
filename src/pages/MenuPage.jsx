@@ -750,28 +750,38 @@ const MenuPage = () => {
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            padding: 15px 0;
-            margin-bottom: 30px;
+            padding: 12px 0;
+            margin-bottom: 25px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
-            width: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
           }
 
           .menu-categories-pills {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 0 10px;
-            justify-content: center;
+            flex-wrap: nowrap;
+            gap: 12px;
+            padding: 0 20px;
+            justify-content: flex-start;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+          }
+
+          .menu-categories-pills::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
           }
 
           .menu-pill {
-            padding: 8px 15px !important;
-            font-size: 11px !important;
+            padding: 8px 18px !important;
+            font-size: 13px !important;
             border-radius: 50px;
             background: #ffffff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             flex-shrink: 0;
           }
 
@@ -783,13 +793,13 @@ const MenuPage = () => {
 
           .dish-image-box {
             width: 100%;
-            height: 200px;
+            height: 180px;
             min-width: 100%;
           }
 
           .dish-image-box.dual-images {
             flex-direction: row;
-            height: 180px;
+            height: 160px;
           }
 
           .dish-info-box {
